@@ -59,7 +59,7 @@ button {
   min-height: 100vh;
   position: relative;
   z-index: 1;
-  max-width: 960px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 3rem 1.5rem 0;
 }
@@ -67,7 +67,21 @@ button {
 /* ── Hero ─────────────────────────────────────────────── */
 .home-hero {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.home-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--primary-light);
+  background: rgba(30, 144, 255, 0.1);
+  border: 1px solid rgba(30, 144, 255, 0.25);
+  border-radius: 999px;
+  padding: 0.3rem 1rem;
+  margin-bottom: 1rem;
 }
 
 .home-title {
@@ -86,6 +100,11 @@ button {
   color: var(--text-muted);
   font-size: 1rem;
   line-height: 1.7;
+}
+
+.home-subtitle-creator {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.3);
 }
 
 .home-quote {
@@ -125,137 +144,180 @@ button {
   text-transform: uppercase;
 }
 
-/* ── Year Cards ───────────────────────────────────────── */
-.home-year-grid {
+/* ── Subject Section ──────────────────────────────────── */
+.home-subject-section {
+  margin-bottom: 3rem;
+}
+
+.home-section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.home-section-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.5px;
+}
+
+.home-section-desc {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+/* ── Subject Grid ─────────────────────────────────────── */
+.home-subject-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  margin-bottom: 2.5rem;
 }
 
-.home-year-card {
+.home-subject-card {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.9rem;
-  padding: 2rem 1rem;
-  background: rgba(255, 255, 255, 0.05);
+  gap: 0.7rem;
+  padding: 1.75rem 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border);
-  border-radius: 18px;
+  border-radius: 20px;
   cursor: pointer;
   transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   overflow: hidden;
+  text-align: center;
 }
 
-.home-year-card::before {
+.home-subject-card::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: var(--gradient);
   opacity: 0;
   transition: opacity 0.3s ease;
   border-radius: inherit;
+  background: radial-gradient(ellipse at 50% 0%, var(--card-glow, rgba(30,144,255,0.2)) 0%, transparent 70%);
 }
 
-.home-year-card:hover::before {
-  opacity: 0.07;
+.home-subject-card:hover::before {
+  opacity: 1;
 }
 
-.home-year-card:hover {
+.home-subject-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(30, 144, 255, 0.4);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 24px var(--primary-glow);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255,255,255,0.06);
 }
 
-.home-year-card--disabled {
+.home-subject-card--disabled {
   opacity: 0.45;
   cursor: not-allowed;
-  filter: grayscale(0.5);
+  filter: grayscale(0.6);
 }
 
-.home-year-card--disabled:hover {
+.home-subject-card--disabled:hover {
   transform: none;
   border-color: var(--border);
   box-shadow: none;
 }
 
-.home-year-card--disabled::before {
-  display: none;
+.home-subject-card--more {
+  opacity: 0.4;
+  cursor: default;
+  justify-content: center;
 }
 
-.home-coming-soon {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  font-size: 0.6rem;
-  font-weight: 800;
-  letter-spacing: 1.2px;
-  color: #fff;
-  background: var(--gradient);
-  padding: 0.2rem 0.55rem;
-  border-radius: 999px;
+.home-subject-card--more:hover {
+  transform: none;
+  border-color: var(--border);
+  box-shadow: none;
 }
 
-.home-year-icon {
+.home-subject-icon {
   width: 68px;
   height: 68px;
-  background: var(--gradient);
-  border-radius: 16px;
+  border-radius: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  box-shadow: 0 8px 20px rgba(30, 144, 255, 0.35);
   flex-shrink: 0;
   position: relative;
   z-index: 1;
+  transition: transform 0.3s ease;
 }
 
-.home-year-label {
-  font-size: 1.15rem;
+.home-subject-card:hover .home-subject-icon {
+  transform: scale(1.08);
+}
+
+.home-subject-icon--more {
+  background: rgba(255, 255, 255, 0.07) !important;
+  box-shadow: none !important;
+}
+
+.home-subject-name {
+  font-size: 1rem;
   font-weight: 700;
+  position: relative;
+  z-index: 1;
+  line-height: 1.25;
+}
+
+.home-subject-name--muted {
+  color: var(--text-muted);
+}
+
+.home-subject-tag {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
   position: relative;
   z-index: 1;
 }
 
-/* ── Quick Links ──────────────────────────────────────── */
-.home-quicklinks {
-  margin-bottom: 3rem;
-}
-
-.home-quicklinks-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 0.85rem;
-}
-
-.home-quicklinks-row {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
-
-.home-ql-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.5rem 1.1rem;
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  font-size: 0.875rem;
-  font-weight: 500;
+.home-subject-arrow {
+  position: absolute;
+  bottom: 12px;
+  right: 14px;
   color: var(--text-muted);
-  transition: all 0.2s ease;
-  cursor: pointer;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: all 0.25s ease;
 }
 
-.home-ql-btn:hover {
-  color: var(--text-main);
-  border-color: var(--border-active);
-  background: rgba(30, 144, 255, 0.08);
+.home-subject-card:hover .home-subject-arrow {
+  opacity: 1;
+  transform: translateX(0);
 }
+
+/* ── Coming Soon Pill ─────────────────────────────────── */
+.home-coming-soon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #fff;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+  padding: 0.18rem 0.5rem;
+  border-radius: 999px;
+}
+
+.home-coming-soon--inline {
+  position: static;
+  margin-top: 0.25rem;
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.1);
+}
+
+
 
 /* ── Home Footer ──────────────────────────────────────── */
 .home-footer {
@@ -921,8 +983,69 @@ button {
 /* ══════════════════════════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════════════════════════ */
+/* ── Sidebar subject header ───────────────────────────── */
+.res-sidebar-subject {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.res-sidebar-subject-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.res-sidebar-subject-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.res-sidebar-subject-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ── Top bar subject badge ────────────────────────────── */
+.res-subject-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+/* ── Drive card soon state ────────────────────────────── */
+.res-drive-card--soon {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.res-drive-card--soon:hover {
+  transform: none;
+  border-color: rgba(30, 144, 255, 0.3);
+  box-shadow: none;
+}
+
 @media (max-width: 768px) {
-  .home-year-grid {
+  .home-subject-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -949,14 +1072,28 @@ button {
   }
 }
 
-@media (max-width: 500px) {
-  .home-year-grid {
-    grid-template-columns: 1fr 1fr;
+@media (max-width: 600px) {
+  .home-subject-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
   }
 
+  .home-subject-card {
+    padding: 1.25rem 0.75rem 1rem;
+  }
+
+  .home-subject-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+  }
+
+  .home-subject-name {
+    font-size: 0.88rem;
+  }
+
   .res-card-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .res-body {
@@ -971,6 +1108,10 @@ button {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 0.5rem;
+  }
+
+  .res-sidebar-subject {
+    display: none;
   }
 
   .res-sidebar-title {

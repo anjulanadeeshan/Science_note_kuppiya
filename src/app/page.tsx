@@ -1,99 +1,99 @@
 "use client";
 
 import {
-  GraduationCap, BookOpen, BarChart, Users,
-  X, FileText, GraduationCap as Tutorial, Folder,
-  ChevronRight,
+  Monitor, BarChart2, BookOpen, Zap,
+  FlaskConical, Atom, Leaf, Plus,
+  ArrowRight,
 } from "lucide-react";
-import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-type SemesterData = {
+type Subject = {
   id: string;
   name: string;
-};
-
-type YearData = {
-  id: string;
-  name: string;
+  shortName: string;
   icon: React.ElementType;
-  semesters?: SemesterData[];
+  color: string;
+  glow: string;
   disabled?: boolean;
 };
 
+const subjects: Subject[] = [
+  {
+    id: "computer-science",
+    name: "Computer Science",
+    shortName: "CS",
+    icon: Monitor,
+    color: "linear-gradient(135deg, #1e90ff 0%, #00cfff 100%)",
+    glow: "rgba(30, 144, 255, 0.3)",
+  },
+  {
+    id: "statistics",
+    name: "Statistics",
+    shortName: "STAT",
+    icon: BarChart2,
+    color: "linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)",
+    glow: "rgba(124, 58, 237, 0.3)",
+  },
+  {
+    id: "pure-mathematics",
+    name: "Pure Mathematics",
+    shortName: "PM",
+    icon: BookOpen,
+    color: "linear-gradient(135deg, #0891b2 0%, #06b6d4 100%)",
+    glow: "rgba(8, 145, 178, 0.3)",
+  },
+  {
+    id: "applied-mathematics",
+    name: "Applied Mathematics",
+    shortName: "AM",
+    icon: Zap,
+    color: "linear-gradient(135deg, #d97706 0%, #f59e0b 100%)",
+    glow: "rgba(217, 119, 6, 0.3)",
+  },
+  {
+    id: "chemistry",
+    name: "Chemistry",
+    shortName: "CHEM",
+    icon: FlaskConical,
+    color: "linear-gradient(135deg, #059669 0%, #10b981 100%)",
+    glow: "rgba(5, 150, 105, 0.3)",
+  },
+  {
+    id: "physics",
+    name: "Physics",
+    shortName: "PHY",
+    icon: Atom,
+    color: "linear-gradient(135deg, #e11d48 0%, #f43f5e 100%)",
+    glow: "rgba(225, 29, 72, 0.3)",
+  },
+  {
+    id: "biology",
+    name: "Biology",
+    shortName: "BIO",
+    icon: Leaf,
+    color: "linear-gradient(135deg, #16a34a 0%, #4ade80 100%)",
+    glow: "rgba(22, 163, 74, 0.3)",
+  },
+];
+
 export default function Home() {
   const router = useRouter();
-  const [activeYear, setActiveYear] = useState<YearData | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const years: YearData[] = [
-    {
-      id: "1st-year",
-      name: "1st Year",
-      icon: Users,
-      semesters: [
-        { id: "sem1", name: "1st Semester" },
-        { id: "sem2", name: "2nd Semester" },
-      ],
-    },
-    {
-      id: "2nd-year",
-      name: "2nd Year",
-      icon: BookOpen,
-      semesters: [
-        { id: "sem1", name: "1st Semester" },
-        { id: "sem2", name: "2nd Semester" },
-      ],
-    },
-    {
-      id: "3rd-year",
-      name: "3rd Year",
-      icon: BarChart,
-      semesters: [
-        { id: "sem1", name: "1st Semester" }
-      ],
-    },
-    {
-      id: "4th-year",
-      name: "4th Year",
-      icon: GraduationCap,
-      disabled: true,
-    },
-  ];
-
-  const quickLinks = [
-    { label: "Past Papers", icon: FileText, href: "#" },
-    { label: "Tutorials", icon: Tutorial, href: "#" },
-    { label: "ICA Folders", icon: Folder, href: "#" },
-  ];
-
-  const handleYearClick = (year: YearData) => {
-    if (year.disabled) return;
-    if (year.semesters) {
-      setActiveYear(year);
-      setIsModalOpen(true);
-    }
-  };
-
-  const handleSemesterSelect = (sem: SemesterData) => {
-    if (!activeYear) return;
-    closeModal();
-    router.push(`/year/${activeYear.id}/${sem.id}`);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setTimeout(() => setActiveYear(null), 300);
+  const handleSubjectClick = (subject: Subject) => {
+    if (subject.disabled) return;
+    router.push(`/subject/${subject.id}`);
   };
 
   return (
     <div className="home-page">
       {/* ── Hero ─────────────────────────────── */}
       <section className="home-hero">
-        <h1 className="home-title">Stat Kuppi</h1>
+        <div className="home-badge">48th Batch · UOJ Science</div>
+        <h1 className="home-title">Edu Kuppi</h1>
         <p className="home-subtitle">
-          Student guides for Statistics notes, ICA, and Pastpapers.<br />
-          Created by 48th Batch UOJ Science
+          Student guides for Statistics, Computing, and Science notes.
+          <br />
+          <span className="home-subtitle-creator">Created by 48th Batch UOJ Science</span>
         </p>
 
         <div className="home-quote">
@@ -105,71 +105,55 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Year Cards ───────────────────────── */}
-      <div className="home-year-grid">
-        {years.map((year) => (
-          <button
-            key={year.id}
-            onClick={() => handleYearClick(year)}
-            className={`home-year-card${year.disabled ? " home-year-card--disabled" : ""}`}
-            disabled={year.disabled}
-          >
-            {year.disabled && (
-              <span className="home-coming-soon">COMING SOON</span>
-            )}
-            <div className="home-year-icon">
-              <year.icon size={36} strokeWidth={1.5} />
-            </div>
-            <span className="home-year-label">{year.name}</span>
-          </button>
-        ))}
-      </div>
-
-      {/* ── Quick Links ──────────────────────── */}
-      <div className="home-quicklinks">
-        <h3 className="home-quicklinks-title">Quick Links</h3>
-        <div className="home-quicklinks-row">
-          {quickLinks.map((link) => (
-            <a key={link.label} href={link.href} className="home-ql-btn">
-              <link.icon size={15} strokeWidth={1.8} />
-              {link.label}
-            </a>
-          ))}
+      {/* ── Subject Section ──────────────────── */}
+      <section className="home-subject-section">
+        <div className="home-section-header">
+          <h2 className="home-section-title">Select Your Subject</h2>
+          <p className="home-section-desc">
+            Access comprehensive notes, tutorials, ICAs, and past papers for your degree program.
+          </p>
         </div>
-      </div>
 
-      {/* ── Semester Modal ───────────────────── */}
-      {isModalOpen && activeYear && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div
-            className={`modal-card modal-open`}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button className="modal-close" onClick={closeModal} aria-label="Close">
-              <X size={18} />
-            </button>
-
-            <div className="modal-icon-wrapper">
-              {activeYear.icon && <activeYear.icon size={30} strokeWidth={1.5} />}
-            </div>
-            <h2 className="modal-title">{activeYear.name}</h2>
-            <p className="modal-subtitle">Select your semester</p>
-
-            <div className="semester-grid">
-              {activeYear.semesters?.map((sem) => (
-                <button
-                  key={sem.id}
-                  className="semester-btn"
-                  onClick={() => handleSemesterSelect(sem)}
+        <div className="home-subject-grid">
+          {subjects.map((subject) => {
+            const Icon = subject.icon;
+            return (
+              <button
+                key={subject.id}
+                id={`subject-${subject.id}`}
+                onClick={() => handleSubjectClick(subject)}
+                className={`home-subject-card${subject.disabled ? " home-subject-card--disabled" : ""}`}
+                style={{ "--card-glow": subject.glow } as React.CSSProperties}
+                disabled={subject.disabled}
+              >
+                {subject.disabled && (
+                  <span className="home-coming-soon">COMING SOON</span>
+                )}
+                <div
+                  className="home-subject-icon"
+                  style={{ background: subject.color, boxShadow: `0 8px 24px ${subject.glow}` }}
                 >
-                  <span className="sem-label">{sem.name}</span>
-                  <ChevronRight size={18} className="sem-arrow" />
-                </button>
-              ))}
+                  <Icon size={32} strokeWidth={1.5} />
+                </div>
+                <span className="home-subject-name">{subject.name}</span>
+                <span className="home-subject-tag">{subject.shortName}</span>
+                <div className="home-subject-arrow">
+                  <ArrowRight size={16} />
+                </div>
+              </button>
+            );
+          })}
+
+          {/* More Subjects placeholder */}
+          <div className="home-subject-card home-subject-card--more">
+            <div className="home-subject-icon home-subject-icon--more">
+              <Plus size={28} strokeWidth={1.5} />
             </div>
+            <span className="home-subject-name home-subject-name--muted">More Subjects</span>
+            <span className="home-coming-soon home-coming-soon--inline">COMING SOON</span>
           </div>
         </div>
-      )}
+      </section>
 
       {/* ── Footer ───────────────────────────── */}
       <footer className="home-footer">
@@ -178,9 +162,9 @@ export default function Home() {
           students with seamless access to study materials and resources.
         </p>
         <div className="home-footer-brand">
-          <p className="home-footer-dev">Developed by</p>
+          <p className="home-footer-dev">DEVELOPED BY</p>
           <p className="home-footer-team">TEAM ASGARD</p>
-          <p className="home-footer-batch">48TH BATCH</p>
+          <p className="home-footer-batch">48TH BATCH UOJ SCIENCE</p>
         </div>
       </footer>
     </div>

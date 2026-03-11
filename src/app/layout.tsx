@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Stat Kuppi - Statistics & Resources",
-  description: "Statistics notes, ICAs and Pastpapers for the 48th batch.",
+  title: "Edu Kuppi - Science & Computing Notes",
+  description: "Notes, tutorials, ICAs and past papers for CS, Statistics, Mathematics, Chemistry, Physics and Biology — 48th Batch UOJ Science.",
   icons: {
     icon: "/ico.png",
   },
