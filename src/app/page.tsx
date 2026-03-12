@@ -95,7 +95,8 @@ export default function Home() {
       <section className="home-hero">
         <h1 className="home-title">Note Kuppi</h1>
         <p className="home-subtitle">
-          Student guides for Statistics, Computing, and Science notes.
+          <span className="home-subtitle-lang">සෑම සටහනක්ම එකම තැනක.  | </span> 
+          <span className="home-subtitle-lang">ஒவ்வொரு குறிப்பும் ஒரே இடத்தில்..</span>
           <br />
           <span className="home-subtitle-creator">Created by 48th Batch UOJ Science</span>
         </p>

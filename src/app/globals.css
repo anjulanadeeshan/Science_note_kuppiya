@@ -107,6 +107,12 @@ button {
   color: rgba(255,255,255,0.3);
 }
 
+.home-subtitle-lang {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.01em;
+}
+
 .home-quote {
   position: relative;
   display: inline-block;
