@@ -27,7 +27,7 @@ const statistics: SubjectData = {
                 key: "Additional-resources", 
                 label: "Additional Resources", 
                 url: "https://drive.google.com/file/d/1K87tkj2KOYRht5atRSnBDKiIwBe9U4t-/view?usp=drive_link",
-                description: "This is only an additional resourse recommended by 48th Booster brother. This will only help to understand core concepts, don't depend only on this resourse."
+                description: "This is only an additional resourse recommended by 48th Booster. This will only help to understand core concepts, don't depend only on this resourse."
               },
               { key: "icas", label: "ICAs", url: "https://drive.google.com/drive/folders/1ZlDqq50zSvViklTao1MjN3F_z_RbPiRj?usp=drive_link" },
               { key: "pastpapers", label: "Past Papers", url: "https://drive.google.com/drive/folders/1DXI4LB5hyYqpsvobTZulK5ygpuOauCf_?usp=drive_link" },
@@ -96,7 +96,7 @@ const statistics: SubjectData = {
             resources: [
               { key: "notes", label: "Notes", url: "https://drive.google.com/drive/folders/1-VQoraViIYWW8KhicNAF4_WQY3ITCZEW?usp=drive_link" },
               { key: "tutorials", label: "Tutorials", url: "#" },
-              { key: "icas", label: "ICAs", url: "#" },
+              { key: "icas", label: "ICAs", url: "https://drive.google.com/drive/folders/1G-BVlCnMA8NZie5XRj-vX849tYmBXZQN?usp=drive_link" },
               { key: "pastpapers", label: "Past Papers", url: "https://drive.google.com/drive/folders/1IyjqIyiaLF1rTKiWN8VC_6_BuWmG3ybX?usp=drive_link" },
             ],
           },
@@ -110,9 +110,9 @@ const statistics: SubjectData = {
             code: "STA203G3",
             name: "Dr. R. Tharshan",          // ← update when confirmed
             resources: [
-              { key: "notes", label: "Notes", url: "https://drive.google.com/drive/folders/1GE2Fd-cFEdVUSHhPErqtsJc9KyfcgrRh?usp=drive_link" },
+              { key: "notes", label: "Notes", url: "https://drive.google.com/drive/folders/1rLJzu_DfUTq2AvgkxbczojV7lLfRCQr6?usp=drive_link" },
               { key: "tutorials", label: "Tutorials", url: "#" },
-              { key: "icas", label: "ICAs", url: "#" },
+              { key: "icas", label: "ICAs", url: "https://drive.google.com/drive/folders/1eINXBvhj4wRktC1_2suS1vfVc48mNWrN?usp=drive_link" },
               { key: "pastpapers", label: "Past Papers", url: "https://drive.google.com/drive/folders/1vsA2Kiz4GxVeKo5o-c4iF67MiqstVF7V?usp=drive_link" },
             ],
           },
@@ -120,9 +120,9 @@ const statistics: SubjectData = {
             code: "STA204G3",
             name: "Mr. A. Laheetharan",          // ← update when confirmed
             resources: [
-              { key: "notes", label: "Notes", url: "https://drive.google.com/drive/folders/17myTpA3UNbg0x9bGUjE9z_cf22wCS_SZ?usp=drive_link" },
+              { key: "notes", label: "Notes", url: "https://drive.google.com/drive/folders/1pAaYtBvOGPy6QnAWRYqD2YkcMNEN14Bh?usp=drive_link" },
               { key: "tutorials", label: "Tutorials", url: "https://drive.google.com/drive/folders/1-PmKZ8eHApCq_U0kG2OBQxrtGq-NXHaO?usp=drive_link" },
-              { key: "icas", label: "ICAs", url: "#" },
+              { key: "icas", label: "ICAs", url: "https://drive.google.com/drive/folders/1yL1ZqMm3o8rJgH07Q0G_exAwG5uzWuHf?usp=drive_link" },
               { key: "pastpapers", label: "Past Papers", url: "https://drive.google.com/drive/folders/1K6QMZpd9IQd9_00lsDUG9Fua4_N2rBjg?usp=drive_link" },
             ],
           },
