@@ -3,7 +3,7 @@
 import {
     ArrowLeft, Users, BookOpen, BarChart2,
     GraduationCap, Monitor, Zap, FlaskConical,
-    Atom, Leaf, ChevronRight, X,
+    Atom, Leaf, ChevronRight, X, Search,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
