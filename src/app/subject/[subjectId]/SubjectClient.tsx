@@ -100,7 +100,7 @@ export default function SubjectClient({ subjectId }: { subjectId: string }) {
                 >
                     <SubjectIcon size={42} strokeWidth={1.3} />
                 </div>
-                <h1 className="home-title">{meta.name}</h1>
+                <h1 className="home-title" style={{ background: meta.color, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>{meta.name}</h1>
                 <p className="home-subtitle">Select your academic year to access resources</p>
             </section>
 
