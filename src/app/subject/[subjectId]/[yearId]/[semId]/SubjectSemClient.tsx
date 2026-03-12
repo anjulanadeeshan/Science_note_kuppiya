@@ -6,19 +6,22 @@ import {
     ExternalLink, Search, ChevronRight, Home,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { resourceData } from "@/data";
 import type { CategoryKey, Course } from "@/data";
 import { subjectMeta } from "../../SubjectClient";
 
-/* ── Category nav config ──────────────────────────────────── */
-const navCategories: { key: CategoryKey; label: string; icon: React.ElementType }[] = [
-    { key: "notes",      label: "Notes",       icon: BookOpen      },
-    { key: "tutorials",  label: "Tutorials",   icon: GraduationCap },
-    { key: "icas",       label: "ICAs",        icon: FileCheck     },
-    { key: "pastpapers", label: "Past Papers", icon: FileText      },
-];
+/* ── Default icon mapping for common resource types ──────── */
+const getResourceIcon = (key: string): React.ElementType => {
+    const iconMap: Record<string, React.ElementType> = {
+        notes: BookOpen,
+        tutorials: GraduationCap,
+        icas: FileCheck,
+        pastpapers: FileText,
+    };
+    return iconMap[key.toLowerCase()] || BookOpen;
+};
 
 /* ── Resource Page Component ─────────────────────────────── */
 export default function SubjectSemClient({
@@ -26,7 +29,7 @@ export default function SubjectSemClient({
 }: { subjectId: string; yearId: string; semId: string }) {
 
     const router = useRouter();
-    const [activeCat,    setActiveCat   ] = useState<CategoryKey>("notes");
+    const [activeCat,    setActiveCat   ] = useState<string>("");
     const [searchQuery,  setSearchQuery ] = useState("");
     const [activeCourse, setActiveCourse] = useState<Course | null>(null);
 
@@ -34,6 +37,21 @@ export default function SubjectSemClient({
     const subjectYears = resourceData[subjectId];
     const year         = subjectYears?.[yearId];
     const sem          = year?.semesters[semId];
+
+    // Get available resource categories from the active course
+    const availableCategories = activeCourse?.resources || [];
+    
+    // Set initial active category when course changes
+    useEffect(() => {
+        if (activeCourse && availableCategories.length > 0) {
+            const currentCatExists = availableCategories.find(c => c.key === activeCat);
+            if (!activeCat || !currentCatExists) {
+                setActiveCat(availableCategories[0].key);
+            }
+        } else if (!activeCourse) {
+            setActiveCat("");
+        }
+    }, [activeCourse, availableCategories, activeCat]);
 
     if (!meta || !year || !sem) {
         return (
@@ -45,7 +63,7 @@ export default function SubjectSemClient({
     }
 
     const SubjectIcon = meta.icon;
-    const currentCat  = navCategories.find((c) => c.key === activeCat)!;
+    const currentCat  = availableCategories.find((c) => c.key === activeCat) || availableCategories[0];
 
     const filteredCourses = searchQuery.trim()
         ? sem.courses.filter((c) =>
@@ -56,8 +74,9 @@ export default function SubjectSemClient({
 
     /* Render a resource card for the active course + category */
     const renderResourceCard = (course: Course) => {
-        const url    = course.resources[activeCat];
-        const isSoon = !url || url === "#";
+        const resource = course.resources.find(r => r.key === activeCat);
+        const url      = resource?.url || "#";
+        const isSoon   = !url || url === "#" || url === "";
         return (
             <a
                 href={!isSoon ? url : undefined}
@@ -70,7 +89,7 @@ export default function SubjectSemClient({
                     <FolderOpen size={36} strokeWidth={1.2} />
                 </div>
                 <div className="res-drive-info">
-                    <span className="res-drive-label">{course.code} — {currentCat.label}</span>
+                    <span className="res-drive-label">{course.code} — {resource?.label || activeCat}</span>
                     <span className="res-drive-sub">
                         {isSoon ? "Coming Soon" : "Google Drive →"}
                     </span>
@@ -120,39 +139,49 @@ export default function SubjectSemClient({
                         </div>
                     </div>
 
-                    <h2 className="res-sidebar-title">RESOURCES</h2>
-                    <nav className="res-sidebar-nav">
-                        {navCategories.map((cat) => {
-                            const CatIcon = cat.icon;
-                            return (
-                                <button
-                                    key={cat.key}
-                                    id={`nav-${cat.key}`}
-                                    className={`res-nav-item${activeCat === cat.key ? " res-nav-item--active" : ""}`}
-                                    onClick={() => { setActiveCat(cat.key); setActiveCourse(null); }}
-                                >
-                                    <CatIcon size={17} strokeWidth={1.7} />
-                                    {cat.label}
-                                </button>
-                            );
-                        })}
-                    </nav>
-
-                    {/* Drive folder shortcut — only when available */}
-                    {sem.driveFolder && sem.driveFolder !== "#" && (
+                    {/* Resource nav — only visible once a course is selected */}
+                    {activeCourse ? (
                         <>
-                            <h2 className="res-sidebar-title" style={{ marginTop: "1rem" }}>FOLDER</h2>
-                            <a
-                                href={sem.driveFolder}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="res-nav-item res-nav-folder-link"
-                            >
-                                <FolderOpen size={17} strokeWidth={1.7} />
-                                All Notes
-                                <ExternalLink size={12} style={{ marginLeft: "auto" }} />
-                            </a>
+                            <h2 className="res-sidebar-title">RESOURCES</h2>
+                            <nav className="res-sidebar-nav">
+                                {availableCategories.map((cat) => {
+                                    const CatIcon = getResourceIcon(cat.key);
+                                    return (
+                                        <button
+                                            key={cat.key}
+                                            id={`nav-${cat.key}`}
+                                            className={`res-nav-item${activeCat === cat.key ? " res-nav-item--active" : ""}`}
+                                            onClick={() => setActiveCat(cat.key)}
+                                        >
+                                            <CatIcon size={17} strokeWidth={1.7} />
+                                            {cat.label}
+                                        </button>
+                                    );
+                                })}
+                            </nav>
+
+                            {/* Drive folder shortcut — only when available */}
+                            {sem.driveFolder && sem.driveFolder !== "#" && (
+                                <>
+                                    <h2 className="res-sidebar-title" style={{ marginTop: "1rem" }}>FOLDER</h2>
+                                    <a
+                                        href={sem.driveFolder}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="res-nav-item res-nav-folder-link"
+                                    >
+                                        <FolderOpen size={17} strokeWidth={1.7} />
+                                        All Notes
+                                        <ExternalLink size={12} style={{ marginLeft: "auto" }} />
+                                    </a>
+                                </>
+                            )}
                         </>
+                    ) : (
+                        /* Prompt shown before any course is chosen */
+                        <p className="res-sidebar-hint">
+                            Select a subject to view its resources
+                        </p>
                     )}
                 </aside>
 
@@ -172,16 +201,11 @@ export default function SubjectSemClient({
                         <span className="res-bc-link">{year.label}</span>
                         <ChevronRight size={14} className="res-bc-sep" />
                         <span className="res-bc-link">{sem.label}</span>
+                        <ChevronRight size={14} className="res-bc-sep" />
                         {activeCourse ? (
-                            <>
-                                <ChevronRight size={14} className="res-bc-sep" />
-                                <span className="res-bc-current">{activeCourse.code}</span>
-                            </>
+                            <span className="res-bc-current">{activeCourse.code}</span>
                         ) : (
-                            <>
-                                <ChevronRight size={14} className="res-bc-sep" />
-                                <span className="res-bc-current">{currentCat.label}</span>
-                            </>
+                            <span className="res-bc-current">Subjects</span>
                         )}
                     </nav>
 
@@ -200,8 +224,8 @@ export default function SubjectSemClient({
 
                             {/* Resource type tabs */}
                             <div className="subj-cat-tabs">
-                                {navCategories.map((cat) => {
-                                    const CatIcon = cat.icon;
+                                {availableCategories.map((cat) => {
+                                    const CatIcon = getResourceIcon(cat.key);
                                     return (
                                         <button
                                             key={cat.key}
@@ -228,8 +252,45 @@ export default function SubjectSemClient({
                             <h1 className="res-main-title">
                                 {year.label} — {sem.label}
                             </h1>
+
+                            {/* Semester Toggle */}
+                            <div style={{ display: "flex", gap: "0.5rem", marginBottom: "1rem" }}>
+                                {Object.entries(year.semesters).map(([semKey, semester]) => (
+                                    <button
+                                        key={semKey}
+                                        onClick={() => router.push(`/subject/${subjectId}/${yearId}/${semKey}`)}
+                                        style={{
+                                            padding: "0.5rem 1rem",
+                                            borderRadius: "0.5rem",
+                                            border: semKey === semId ? "2px solid" : "1px solid rgba(255,255,255,0.1)",
+                                            borderColor: semKey === semId ? meta.color : undefined,
+                                            background: semKey === semId ? `${meta.color}15` : "rgba(255,255,255,0.02)",
+                                            color: semKey === semId ? meta.color : "rgba(255,255,255,0.6)",
+                                            cursor: "pointer",
+                                            fontSize: "0.875rem",
+                                            fontWeight: semKey === semId ? "600" : "400",
+                                            transition: "all 0.2s ease",
+                                        }}
+                                        onMouseEnter={(e) => {
+                                            if (semKey !== semId) {
+                                                e.currentTarget.style.background = "rgba(255,255,255,0.05)";
+                                                e.currentTarget.style.borderColor = "rgba(255,255,255,0.2)";
+                                            }
+                                        }}
+                                        onMouseLeave={(e) => {
+                                            if (semKey !== semId) {
+                                                e.currentTarget.style.background = "rgba(255,255,255,0.02)";
+                                                e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)";
+                                            }
+                                        }}
+                                    >
+                                        {semester.label}
+                                    </button>
+                                ))}
+                            </div>
+
                             <p className="res-main-sem-tag">
-                                {filteredCourses.length} subject{filteredCourses.length !== 1 ? "s" : ""} · select one to view {currentCat.label}
+                                {filteredCourses.length} subject{filteredCourses.length !== 1 ? "s" : ""} · select a subject to view its resources
                             </p>
 
                             {filteredCourses.length === 0 ? (
@@ -254,17 +315,16 @@ export default function SubjectSemClient({
                                                 <span className="subj-course-code">{course.code}</span>
                                                 <span className="subj-course-name">{course.name}</span>
                                                 <div className="subj-course-pills">
-                                                    {navCategories.map((cat) => {
-                                                        const CatIcon = cat.icon;
-                                                        const url     = course.resources[cat.key];
-                                                        const active  = url && url !== "#";
+                                                    {course.resources.map((resource) => {
+                                                        const CatIcon = getResourceIcon(resource.key);
+                                                        const active  = resource.url && resource.url !== "#" && resource.url !== "";
                                                         return (
                                                             <span
-                                                                key={cat.key}
+                                                                key={resource.key}
                                                                 className={`subj-course-pill${active ? " subj-course-pill--active" : ""}`}
                                                             >
                                                                 <CatIcon size={10} strokeWidth={2} />
-                                                                {cat.label}
+                                                                {resource.label}
                                                             </span>
                                                         );
                                                     })}

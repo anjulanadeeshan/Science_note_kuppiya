@@ -16,12 +16,22 @@ const appliedMathematics: SubjectData = {
           {
             code: "AM101",
             name: "Mechanics I",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "AM102",
             name: "Statics",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -32,12 +42,22 @@ const appliedMathematics: SubjectData = {
           {
             code: "AM103",
             name: "Mechanics II",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "AM104",
             name: "Dynamics",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -53,12 +73,22 @@ const appliedMathematics: SubjectData = {
           {
             code: "AM201",
             name: "Ordinary Differential Equations",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "AM202",
             name: "Numerical Methods",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -69,12 +99,22 @@ const appliedMathematics: SubjectData = {
           {
             code: "AM203",
             name: "Partial Differential Equations",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "AM204",
             name: "Mathematical Modelling",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -90,12 +130,22 @@ const appliedMathematics: SubjectData = {
           {
             code: "AM301",
             name: "Fluid Dynamics",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "AM302",
             name: "Continuum Mechanics",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -106,12 +156,22 @@ const appliedMathematics: SubjectData = {
           {
             code: "AM303",
             name: "Control Theory",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "AM304",
             name: "Operations Research",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },

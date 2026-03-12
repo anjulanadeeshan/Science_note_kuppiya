@@ -2,23 +2,32 @@
    Shared types for all subject resource data
    ───────────────────────────────────────────────────────── */
 
-/** The four resource categories available for every course */
-export type CategoryKey = "notes" | "tutorials" | "icas" | "pastpapers";
+/** Common resource category types */
+export type CategoryKey = string;
+
+/**
+ * Individual resource category definition
+ */
+export type ResourceCategory = {
+  key: string;
+  label: string;
+  url: string;
+};
 
 /**
  * Per-course resource URLs.
- * Use "#" for any category that is not yet available (shows "Coming Soon").
+ * Flexible array of resource categories - each subject can define its own.
+ * Common categories: "notes", "tutorials", "icas", "pastpapers"
+ * Use "#" or empty string for URL when not yet available (shows "Coming Soon").
  */
-export type CourseResources = {
-  [K in CategoryKey]: string;
-};
+export type CourseResources = ResourceCategory[];
 
 /**
  * A single module / paper within a semester.
  *
  *   code  – module code shown as the tag  e.g. "CS101"
  *   name  – lecturer name or module title e.g. "Introduction to Computing"
- *   resources – one Google Drive URL per category
+ *   resources – array of resource categories with their URLs
  */
 export type Course = {
   code: string;

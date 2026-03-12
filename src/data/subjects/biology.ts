@@ -16,12 +16,22 @@ const biology: SubjectData = {
           {
             code: "BIO101",
             name: "Cell Biology",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "BIO102",
             name: "Botany I",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -32,12 +42,22 @@ const biology: SubjectData = {
           {
             code: "BIO103",
             name: "Genetics",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "BIO104",
             name: "Zoology I",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -53,12 +73,22 @@ const biology: SubjectData = {
           {
             code: "BIO201",
             name: "Biochemistry",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "BIO202",
             name: "Microbiology",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -69,12 +99,22 @@ const biology: SubjectData = {
           {
             code: "BIO203",
             name: "Ecology",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "BIO204",
             name: "Physiology",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -90,12 +130,22 @@ const biology: SubjectData = {
           {
             code: "BIO301",
             name: "Molecular Biology",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "BIO302",
             name: "Evolutionary Biology",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -106,12 +156,22 @@ const biology: SubjectData = {
           {
             code: "BIO303",
             name: "Biotechnology",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "BIO304",
             name: "Bioinformatics",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },

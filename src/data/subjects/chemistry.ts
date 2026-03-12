@@ -16,12 +16,22 @@ const chemistry: SubjectData = {
           {
             code: "CHM101",
             name: "General Chemistry I",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "CHM102",
             name: "Inorganic Chemistry I",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -32,12 +42,22 @@ const chemistry: SubjectData = {
           {
             code: "CHM103",
             name: "General Chemistry II",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "CHM104",
             name: "Organic Chemistry I",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -53,12 +73,22 @@ const chemistry: SubjectData = {
           {
             code: "CHM201",
             name: "Organic Chemistry II",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "CHM202",
             name: "Physical Chemistry I",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -69,12 +99,22 @@ const chemistry: SubjectData = {
           {
             code: "CHM203",
             name: "Inorganic Chemistry II",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "CHM204",
             name: "Analytical Chemistry",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -90,12 +130,22 @@ const chemistry: SubjectData = {
           {
             code: "CHM301",
             name: "Physical Chemistry II",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "CHM302",
             name: "Spectroscopy",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -106,12 +156,22 @@ const chemistry: SubjectData = {
           {
             code: "CHM303",
             name: "Biochemistry",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "CHM304",
             name: "Environmental Chemistry",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },

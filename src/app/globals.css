@@ -1157,6 +1157,17 @@ button {
 
 .subj-back-to-courses:hover { color: var(--text-main); }
 
+/* Sidebar prompt shown when no course selected yet */
+.res-sidebar-hint {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border-left: 2px solid rgba(255,255,255,0.08);
+  padding-left: 0.75rem;
+}
+
 /* ── Empty state ─────────────────────────────────────────── */
 .subj-empty {
   margin-top: 2rem;

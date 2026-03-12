@@ -21,22 +21,22 @@ const statistics: SubjectData = {
           {
             code: "STA101G3",
             name: "Mr. A. Laheetharan",
-            resources: {
-              notes:      "https://drive.google.com/drive/folders/1rBrJGdC_rvnkbM4bUV3LTibSg_jEid7W?usp=sharing",
-              tutorials:  "#",
-              icas:       "#",
-              pastpapers: "#",
-            },
+            resources: [
+              { key: "notes", label: "Notes", url: "https://drive.google.com/drive/folders/1rBrJGdC_rvnkbM4bUV3LTibSg_jEid7W?usp=sharing" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "STA102G2",
             name: "Dr. S. Arumairajan",
-            resources: {
-              notes:      "https://drive.google.com/drive/folders/1VBFNsp0KNyO33wSNg9wOviv57PdOQHU1?usp=sharing",
-              tutorials:  "#",
-              icas:       "#",
-              pastpapers: "#",
-            },
+            resources: [
+              { key: "notes", label: "Notes", url: "https://drive.google.com/drive/folders/1VBFNsp0KNyO33wSNg9wOviv57PdOQHU1?usp=sharing" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -47,22 +47,22 @@ const statistics: SubjectData = {
           {
             code: "STA103G3",
             name: "Dr. S. Arivalzahan",
-            resources: {
-              notes:      "https://drive.google.com/drive/folders/1PDVPo_sW__zAsMO5sHtm0R1hmdh2OQLQ?usp=sharing",
-              tutorials:  "#",
-              icas:       "#",
-              pastpapers: "#",
-            },
+            resources: [
+              { key: "notes", label: "Notes", url: "https://drive.google.com/drive/folders/1PDVPo_sW__zAsMO5sHtm0R1hmdh2OQLQ?usp=sharing" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "STA104G2",
             name: "Mrs. N. Sathkunanathan",
-            resources: {
-              notes:      "https://drive.google.com/drive/folders/1MC0TFghRw4dw0TnrfR1Ye2-6R5j5tCf4?usp=sharing",
-              tutorials:  "#",
-              icas:       "#",
-              pastpapers: "#",
-            },
+            resources: [
+              { key: "notes", label: "Notes", url: "https://drive.google.com/drive/folders/1MC0TFghRw4dw0TnrfR1Ye2-6R5j5tCf4?usp=sharing" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -80,22 +80,22 @@ const statistics: SubjectData = {
           {
             code: "STA201G3",
             name: "Mrs. N. Sathkunanathan",
-            resources: {
-              notes:      "https://drive.google.com/drive/folders/1kZQW5_VVMit7TZUzDLYx6vzt5vvwkRI4?usp=sharing",
-              tutorials:  "#",
-              icas:       "#",
-              pastpapers: "#",
-            },
+            resources: [
+              { key: "notes", label: "Notes", url: "https://drive.google.com/drive/folders/1kZQW5_VVMit7TZUzDLYx6vzt5vvwkRI4?usp=sharing" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "STA202G2",
             name: "Mrs. J. Duwarakan",
-            resources: {
-              notes:      "https://drive.google.com/drive/folders/1Ucg5wVPyH4zm0A8Qs2Tt_GcRdGWdJbSX?usp=sharing",
-              tutorials:  "#",
-              icas:       "#",
-              pastpapers: "#",
-            },
+            resources: [
+              { key: "notes", label: "Notes", url: "https://drive.google.com/drive/folders/1Ucg5wVPyH4zm0A8Qs2Tt_GcRdGWdJbSX?usp=sharing" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -106,12 +106,12 @@ const statistics: SubjectData = {
           {
             code: "STA2xx",
             name: "Subject Name",          // ← update when confirmed
-            resources: {
-              notes:      "#",
-              tutorials:  "#",
-              icas:       "#",
-              pastpapers: "#",
-            },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -130,7 +130,12 @@ const statistics: SubjectData = {
           // {
           //   code: "STA301",
           //   name: "Lecturer Name",
-          //   resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+          //   resources: [
+          //     { key: "notes", label: "Notes", url: "#" },
+          //     { key: "tutorials", label: "Tutorials", url: "#" },
+          //     { key: "icas", label: "ICAs", url: "#" },
+          //     { key: "pastpapers", label: "Past Papers", url: "#" },
+          //   ],
           // },
         ],
       },

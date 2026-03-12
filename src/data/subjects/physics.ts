@@ -16,12 +16,22 @@ const physics: SubjectData = {
           {
             code: "PHY101",
             name: "Mechanics",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "PHY102",
             name: "Waves & Oscillations",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -32,12 +42,22 @@ const physics: SubjectData = {
           {
             code: "PHY103",
             name: "Electromagnetism I",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "PHY104",
             name: "Heat & Thermodynamics",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -53,12 +73,22 @@ const physics: SubjectData = {
           {
             code: "PHY201",
             name: "Electromagnetism II",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "PHY202",
             name: "Optics",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -69,12 +99,22 @@ const physics: SubjectData = {
           {
             code: "PHY203",
             name: "Mathematical Physics",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "PHY204",
             name: "Electronics",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -90,12 +130,22 @@ const physics: SubjectData = {
           {
             code: "PHY301",
             name: "Quantum Mechanics",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "PHY302",
             name: "Statistical Mechanics",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -106,12 +156,22 @@ const physics: SubjectData = {
           {
             code: "PHY303",
             name: "Solid State Physics",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "PHY304",
             name: "Nuclear Physics",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },

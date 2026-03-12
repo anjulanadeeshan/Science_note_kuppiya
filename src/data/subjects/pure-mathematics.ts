@@ -16,12 +16,22 @@ const pureMathematics: SubjectData = {
           {
             code: "PM101",
             name: "Calculus I",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "PM102",
             name: "Linear Algebra",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -32,12 +42,22 @@ const pureMathematics: SubjectData = {
           {
             code: "PM103",
             name: "Calculus II",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "PM104",
             name: "Vector Calculus",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -53,12 +73,22 @@ const pureMathematics: SubjectData = {
           {
             code: "PM201",
             name: "Real Analysis",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "PM202",
             name: "Group Theory",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -69,12 +99,22 @@ const pureMathematics: SubjectData = {
           {
             code: "PM203",
             name: "Abstract Algebra",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "PM204",
             name: "Number Theory",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -90,12 +130,22 @@ const pureMathematics: SubjectData = {
           {
             code: "PM301",
             name: "Topology",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "PM302",
             name: "Functional Analysis",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
@@ -106,12 +156,22 @@ const pureMathematics: SubjectData = {
           {
             code: "PM303",
             name: "Complex Analysis",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
           {
             code: "PM304",
             name: "Differential Geometry",
-            resources: { notes: "#", tutorials: "#", icas: "#", pastpapers: "#" },
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
