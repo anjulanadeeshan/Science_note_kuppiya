@@ -88,7 +88,6 @@ export default function Home() {
     <div className="home-page">
       {/* ── Hero ─────────────────────────────── */}
       <section className="home-hero">
-        <div className="home-badge">48th Batch · UOJ Science</div>
         <h1 className="home-title">Note Kuppi</h1>
         <p className="home-subtitle">
           Student guides for Statistics, Computing, and Science notes.
