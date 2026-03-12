@@ -55,6 +55,7 @@ const statistics: SubjectData = {
               { key: "notes", label: "Notes", url: "https://drive.google.com/drive/folders/1C61KAYhfGVxzq6ucC5x7g_Xi_Q3rQccu?usp=drive_link" },
               { key: "additional", label: "Additional", url: "https://drive.google.com/drive/folders/1CXZIKRIWpubFAP2DQgiOcJdI0Kdxwll7?usp=drive_link" },
               { key: "tutorials", label: "Tutorials", url: "https://drive.google.com/drive/folders/1EsjjW3UFxEH5Y7a4F7tqz6l2C7Bgya1S?usp=drive_link" },
+              { key: "icas", label: "ICAs", url: "https://drive.google.com/drive/folders/1Xa07Oyp6EcG6XijANgin4fVnA3q6bJbO?usp=drive_link" },
               { key: "pastpapers", label: "Past Papers", url: "https://drive.google.com/drive/folders/1wZAs1NjA9XcMQgEhn3SD0smINszcKvuC?usp=drive_link" },
             ],
           },
