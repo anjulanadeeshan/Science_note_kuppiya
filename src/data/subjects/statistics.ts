@@ -27,7 +27,7 @@ const statistics: SubjectData = {
                 key: "Additional-resources", 
                 label: "Additional Resources", 
                 url: "https://drive.google.com/file/d/1K87tkj2KOYRht5atRSnBDKiIwBe9U4t-/view?usp=drive_link",
-                description: "This is only a additional resourse recommended by 48th Booster brother. This will only help to understand core concepts, don't depend only on this resourse."
+                description: "This is only an additional resourse recommended by 48th Booster brother. This will only help to understand core concepts, don't depend only on this resourse."
               },
               { key: "icas", label: "ICAs", url: "https://drive.google.com/drive/folders/1ZlDqq50zSvViklTao1MjN3F_z_RbPiRj?usp=drive_link" },
               { key: "pastpapers", label: "Past Papers", url: "https://drive.google.com/drive/folders/1DXI4LB5hyYqpsvobTZulK5ygpuOauCf_?usp=drive_link" },
