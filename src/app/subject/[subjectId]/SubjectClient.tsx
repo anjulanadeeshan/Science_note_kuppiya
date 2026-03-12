@@ -1,285 +1,188 @@
 "use client";
 
 import {
-    ArrowLeft, BookOpen, GraduationCap,
-    FileText, FileCheck, FolderOpen,
-    ExternalLink, Search, Monitor, BarChart2,
-    Zap, FlaskConical, Atom, Leaf, ChevronRight,
+    ArrowLeft, Users, BookOpen, BarChart2,
+    GraduationCap, Monitor, Zap, FlaskConical,
+    Atom, Leaf, ChevronRight, X,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-/* ── Types ───────────────────────────────────────────────── */
-type CategoryKey = "notes" | "tutorials" | "icas" | "pastpapers";
-
-type CategoryItem = {
-    label: string;
-    url: string;
-    description?: string;
-};
-
-type SubjectCategory = {
-    items: CategoryItem[];
-};
-
-type SubjectConfig = {
+/* ── Subject meta (name / colour / icon) ─────────────────── */
+export const subjectMeta: Record<string, {
     name: string;
     shortName: string;
     color: string;
     glow: string;
     icon: React.ElementType;
-    categories: Record<CategoryKey, SubjectCategory>;
+}> = {
+    "computer-science":    { name: "Computer Science",    shortName: "CS",   color: "linear-gradient(135deg,#1e90ff,#00cfff)", glow: "rgba(30,144,255,.35)",  icon: Monitor      },
+    "statistics":          { name: "Statistics",          shortName: "STAT", color: "linear-gradient(135deg,#7c3aed,#a855f7)", glow: "rgba(124,58,237,.35)",  icon: BarChart2     },
+    "pure-mathematics":    { name: "Pure Mathematics",    shortName: "PM",   color: "linear-gradient(135deg,#0891b2,#06b6d4)", glow: "rgba(8,145,178,.35)",   icon: BookOpen      },
+    "applied-mathematics": { name: "Applied Mathematics", shortName: "AM",   color: "linear-gradient(135deg,#d97706,#f59e0b)", glow: "rgba(217,119,6,.35)",   icon: Zap           },
+    "chemistry":           { name: "Chemistry",           shortName: "CHEM", color: "linear-gradient(135deg,#059669,#10b981)", glow: "rgba(5,150,105,.35)",   icon: FlaskConical  },
+    "physics":             { name: "Physics",             shortName: "PHY",  color: "linear-gradient(135deg,#e11d48,#f43f5e)", glow: "rgba(225,29,72,.35)",   icon: Atom          },
+    "biology":             { name: "Biology",             shortName: "BIO",  color: "linear-gradient(135deg,#16a34a,#4ade80)", glow: "rgba(22,163,74,.35)",   icon: Leaf          },
 };
 
-/* ── Subject Data ─────────────────────────────────────────── */
-export const subjectData: Record<string, SubjectConfig> = {
-    "computer-science": {
-        name: "Computer Science",
-        shortName: "CS",
-        color: "linear-gradient(135deg, #1e90ff 0%, #00cfff 100%)",
-        glow: "rgba(30, 144, 255, 0.35)",
-        icon: Monitor,
-        categories: {
-            notes: { items: [{ label: "View Notes Folder", url: "#", description: "Google Drive" }] },
-            tutorials: { items: [{ label: "View Tutorials Folder", url: "#", description: "Google Drive" }] },
-            icas: { items: [{ label: "View ICA Folder", url: "#", description: "Google Drive" }] },
-            pastpapers: { items: [{ label: "View Past Papers Folder", url: "#", description: "Google Drive" }] },
-        },
-    },
-    "statistics": {
-        name: "Statistics",
-        shortName: "STAT",
-        color: "linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)",
-        glow: "rgba(124, 58, 237, 0.35)",
-        icon: BarChart2,
-        categories: {
-            notes: {
-                items: [
-                    { label: "1st Year — 1st Semester Notes", url: "https://drive.google.com/drive/folders/1ZiMd0UkCuDmet7Xr_13JMXfqMf4YPk_z?usp=drive_link", description: "Google Drive" },
-                    { label: "1st Year — 2nd Semester Notes", url: "https://drive.google.com/drive/folders/12FNzLCvz__iLxB-DH2IaVmVpz0DzKTdn?usp=drive_link", description: "Google Drive" },
-                    { label: "2nd Year — 1st Semester Notes", url: "https://drive.google.com/drive/folders/1wJVHmwQCUdGpJQXpC0XgbqXcLbAt12Ds?usp=sharing", description: "Google Drive" },
-                    { label: "2nd Year — 2nd Semester Notes", url: "https://drive.google.com/drive/folders/19046d9nFFsi3YCmVmT2dRiIF2xsYrhNS?usp=sharing", description: "Google Drive" },
-                    { label: "3rd Year — 1st Semester Notes", url: "https://drive.google.com/drive/folders/1VAeEkGtQ946344uHuRhGAokj68-J1GLS?usp=drive_link", description: "Google Drive" },
-                ],
-            },
-            tutorials: { items: [{ label: "View Tutorials Folder", url: "#", description: "Google Drive" }] },
-            icas: { items: [{ label: "View ICA Folder", url: "#", description: "Google Drive" }] },
-            pastpapers: { items: [{ label: "View Past Papers Folder", url: "#", description: "Google Drive" }] },
-        },
-    },
-    "pure-mathematics": {
-        name: "Pure Mathematics",
-        shortName: "PM",
-        color: "linear-gradient(135deg, #0891b2 0%, #06b6d4 100%)",
-        glow: "rgba(8, 145, 178, 0.35)",
-        icon: BookOpen,
-        categories: {
-            notes: { items: [{ label: "View Notes Folder", url: "#", description: "Google Drive" }] },
-            tutorials: { items: [{ label: "View Tutorials Folder", url: "#", description: "Google Drive" }] },
-            icas: { items: [{ label: "View ICA Folder", url: "#", description: "Google Drive" }] },
-            pastpapers: { items: [{ label: "View Past Papers Folder", url: "#", description: "Google Drive" }] },
-        },
-    },
-    "applied-mathematics": {
-        name: "Applied Mathematics",
-        shortName: "AM",
-        color: "linear-gradient(135deg, #d97706 0%, #f59e0b 100%)",
-        glow: "rgba(217, 119, 6, 0.35)",
-        icon: Zap,
-        categories: {
-            notes: { items: [{ label: "View Notes Folder", url: "#", description: "Google Drive" }] },
-            tutorials: { items: [{ label: "View Tutorials Folder", url: "#", description: "Google Drive" }] },
-            icas: { items: [{ label: "View ICA Folder", url: "#", description: "Google Drive" }] },
-            pastpapers: { items: [{ label: "View Past Papers Folder", url: "#", description: "Google Drive" }] },
-        },
-    },
-    "chemistry": {
-        name: "Chemistry",
-        shortName: "CHEM",
-        color: "linear-gradient(135deg, #059669 0%, #10b981 100%)",
-        glow: "rgba(5, 150, 105, 0.35)",
-        icon: FlaskConical,
-        categories: {
-            notes: { items: [{ label: "View Notes Folder", url: "#", description: "Google Drive" }] },
-            tutorials: { items: [{ label: "View Tutorials Folder", url: "#", description: "Google Drive" }] },
-            icas: { items: [{ label: "View ICA Folder", url: "#", description: "Google Drive" }] },
-            pastpapers: { items: [{ label: "View Past Papers Folder", url: "#", description: "Google Drive" }] },
-        },
-    },
-    "physics": {
-        name: "Physics",
-        shortName: "PHY",
-        color: "linear-gradient(135deg, #e11d48 0%, #f43f5e 100%)",
-        glow: "rgba(225, 29, 72, 0.35)",
-        icon: Atom,
-        categories: {
-            notes: { items: [{ label: "View Notes Folder", url: "#", description: "Google Drive" }] },
-            tutorials: { items: [{ label: "View Tutorials Folder", url: "#", description: "Google Drive" }] },
-            icas: { items: [{ label: "View ICA Folder", url: "#", description: "Google Drive" }] },
-            pastpapers: { items: [{ label: "View Past Papers Folder", url: "#", description: "Google Drive" }] },
-        },
-    },
-    "biology": {
-        name: "Biology",
-        shortName: "BIO",
-        color: "linear-gradient(135deg, #16a34a 0%, #4ade80 100%)",
-        glow: "rgba(22, 163, 74, 0.35)",
-        icon: Leaf,
-        categories: {
-            notes: { items: [{ label: "View Notes Folder", url: "#", description: "Google Drive" }] },
-            tutorials: { items: [{ label: "View Tutorials Folder", url: "#", description: "Google Drive" }] },
-            icas: { items: [{ label: "View ICA Folder", url: "#", description: "Google Drive" }] },
-            pastpapers: { items: [{ label: "View Past Papers Folder", url: "#", description: "Google Drive" }] },
-        },
-    },
+/* ── Year / semester definitions (same for all subjects) ──── */
+type YearDef = {
+    id: string;
+    label: string;
+    icon: React.ElementType;
+    semesters: { id: string; label: string }[];
+    disabled?: boolean;
 };
 
-const navCategories: { key: CategoryKey; label: string; icon: React.ElementType }[] = [
-    { key: "notes", label: "Notes", icon: BookOpen },
-    { key: "tutorials", label: "Tutorials", icon: GraduationCap },
-    { key: "icas", label: "ICAs", icon: FileCheck },
-    { key: "pastpapers", label: "Past Papers", icon: FileText },
+const years: YearDef[] = [
+    { id: "1st-year", label: "1st Year", icon: Users,          semesters: [{ id: "sem1", label: "1st Semester" }, { id: "sem2", label: "2nd Semester" }] },
+    { id: "2nd-year", label: "2nd Year", icon: BookOpen,       semesters: [{ id: "sem1", label: "1st Semester" }, { id: "sem2", label: "2nd Semester" }] },
+    { id: "3rd-year", label: "3rd Year", icon: BarChart2,      semesters: [{ id: "sem1", label: "1st Semester" }, { id: "sem2", label: "2nd Semester" }] },
+    { id: "4th-year", label: "4th Year", icon: GraduationCap,  semesters: [{ id: "sem1", label: "1st Semester" }, { id: "sem2", label: "2nd Semester" }], disabled: true },
 ];
 
-/* ── Client Component ─────────────────────────────────────── */
+/* ── Component ────────────────────────────────────────────── */
 export default function SubjectClient({ subjectId }: { subjectId: string }) {
     const router = useRouter();
-    const [activeCategory, setActiveCategory] = useState<CategoryKey>("notes");
-    const [searchQuery, setSearchQuery] = useState("");
+    const [activeYear, setActiveYear] = useState<YearDef | null>(null);
+    const [modalOpen,  setModalOpen ] = useState(false);
 
-    const subject = subjectData[subjectId];
+    const meta = subjectMeta[subjectId];
 
-    if (!subject) {
+    if (!meta) {
         return (
             <div className="res-not-found">
                 <p>Subject not found.</p>
-                <button onClick={() => router.push("/")} className="res-back-btn">
-                    ← Back to Home
-                </button>
+                <button onClick={() => router.push("/")} className="res-back-btn">← Back to Home</button>
             </div>
         );
     }
 
-    const SubjectIcon = subject.icon;
-    const currentCat = navCategories.find((c) => c.key === activeCategory)!;
-    const currentItems = subject.categories[activeCategory].items;
+    const SubjectIcon = meta.icon;
 
-    const filteredItems = searchQuery.trim()
-        ? currentItems.filter((item) =>
-            item.label.toLowerCase().includes(searchQuery.toLowerCase())
-        )
-        : currentItems;
+    const openModal = (year: YearDef) => {
+        if (year.disabled) return;
+        setActiveYear(year);
+        setModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setModalOpen(false);
+        setTimeout(() => setActiveYear(null), 300);
+    };
+
+    const goToSem = (semId: string) => {
+        if (!activeYear) return;
+        closeModal();
+        router.push(`/subject/${subjectId}/${activeYear.id}/${semId}`);
+    };
 
     return (
-        <div className="res-shell">
-            {/* ── Top Bar ──────────────────────── */}
-            <header className="res-topbar">
+        <div className="home-page subj-year-page">
+
+            {/* ── Top bar ──────────────────────── */}
+            <header className="subj-topbar">
                 <button className="res-back-btn" onClick={() => router.push("/")}>
-                    <ArrowLeft size={16} />
-                    Back to Home
+                    <ArrowLeft size={16} /> Back to Home
                 </button>
-
-                <div className="res-search-wrap">
-                    <Search size={16} className="res-search-icon" />
-                    <input
-                        type="text"
-                        placeholder={`Search in ${subject.name}...`}
-                        className="res-search-input"
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                    />
-                </div>
-
-                {/* Subject badge */}
-                <div
-                    className="res-subject-badge"
-                    style={{ background: subject.color, boxShadow: `0 4px 16px ${subject.glow}` }}
-                >
-                    <SubjectIcon size={16} strokeWidth={1.7} />
-                    <span>{subject.shortName}</span>
+                <div className="subj-topbar-badge"
+                    style={{ background: meta.color, boxShadow: `0 4px 16px ${meta.glow}` }}>
+                    <SubjectIcon size={15} strokeWidth={1.8} />
+                    <span>{meta.shortName}</span>
                 </div>
             </header>
 
-            <div className="res-body">
-                {/* ── Sidebar ────────────────────── */}
-                <aside className="res-sidebar">
-                    {/* Subject header in sidebar */}
-                    <div className="res-sidebar-subject">
-                        <div
-                            className="res-sidebar-subject-icon"
-                            style={{ background: subject.color, boxShadow: `0 6px 18px ${subject.glow}` }}
-                        >
-                            <SubjectIcon size={24} strokeWidth={1.5} />
-                        </div>
-                        <div>
-                            <p className="res-sidebar-subject-name">{subject.name}</p>
-                            <p className="res-sidebar-subject-tag">{subject.shortName}</p>
-                        </div>
-                    </div>
+            {/* ── Hero ─────────────────────────── */}
+            <section className="home-hero subj-hero">
+                <div
+                    className="subj-hero-icon"
+                    style={{ background: meta.color, boxShadow: `0 12px 36px ${meta.glow}` }}
+                >
+                    <SubjectIcon size={42} strokeWidth={1.3} />
+                </div>
+                <h1 className="home-title">{meta.name}</h1>
+                <p className="home-subtitle">Select your academic year to access resources</p>
+            </section>
 
-                    <h2 className="res-sidebar-title">RESOURCES</h2>
-                    <nav className="res-sidebar-nav">
-                        {navCategories.map((cat) => {
-                            const CatIcon = cat.icon;
-                            return (
-                                <button
-                                    key={cat.key}
-                                    id={`nav-${cat.key}`}
-                                    className={`res-nav-item${activeCategory === cat.key ? " res-nav-item--active" : ""}`}
-                                    onClick={() => setActiveCategory(cat.key)}
-                                >
-                                    <CatIcon size={18} strokeWidth={1.7} />
-                                    {cat.label}
-                                </button>
-                            );
-                        })}
-                    </nav>
-                </aside>
+            {/* ── Year grid ────────────────────── */}
+            <section className="home-subject-section">
+                <div className="home-section-header">
+                    <h2 className="home-section-title">Select Your Year</h2>
+                    <p className="home-section-desc">Choose your year to browse semester resources</p>
+                </div>
 
-                {/* ── Main ───────────────────────── */}
-                <main className="res-main">
-                    <nav className="res-breadcrumb" aria-label="Breadcrumb">
-                        <span onClick={() => router.push("/")} className="res-bc-link">Home</span>
-                        <ChevronRight size={14} className="res-bc-sep" />
-                        <span className="res-bc-link">{subject.name}</span>
-                        <ChevronRight size={14} className="res-bc-sep" />
-                        <span className="res-bc-current">{currentCat.label}</span>
-                    </nav>
-
-                    <h1 className="res-main-title">
-                        {subject.name} — {currentCat.label}
-                    </h1>
-                    <p className="res-main-sem-tag">
-                        {filteredItems.length} resource{filteredItems.length !== 1 ? "s" : ""} available
-                    </p>
-
-                    <div className="res-card-grid">
-                        {filteredItems.map((item, idx) => (
-                            <a
-                                key={idx}
-                                href={item.url !== "#" ? item.url : undefined}
-                                target={item.url !== "#" ? "_blank" : undefined}
-                                rel="noopener noreferrer"
-                                className={`res-drive-card${item.url === "#" ? " res-drive-card--soon" : ""}`}
-                                onClick={item.url === "#" ? (e) => e.preventDefault() : undefined}
+                <div className="subj-year-grid">
+                    {years.map((year) => {
+                        const YearIcon = year.icon;
+                        return (
+                            <button
+                                key={year.id}
+                                id={`year-${year.id}`}
+                                onClick={() => openModal(year)}
+                                disabled={year.disabled}
+                                className={`home-subject-card subj-year-card${year.disabled ? " home-subject-card--disabled" : ""}`}
+                                style={{ "--card-glow": meta.glow } as React.CSSProperties}
                             >
-                                <div className="res-drive-icon" style={{ background: subject.color }}>
-                                    <FolderOpen size={36} strokeWidth={1.2} />
+                                {year.disabled && <span className="home-coming-soon">COMING SOON</span>}
+                                <div
+                                    className="home-subject-icon"
+                                    style={{ background: meta.color, boxShadow: `0 8px 24px ${meta.glow}` }}
+                                >
+                                    <YearIcon size={32} strokeWidth={1.5} />
                                 </div>
-                                <div className="res-drive-info">
-                                    <span className="res-drive-label">{item.label}</span>
-                                    <span className="res-drive-sub">
-                                        {item.url === "#" ? "Coming Soon" : `${item.description} →`}
-                                    </span>
-                                </div>
-                                {item.url !== "#" && (
-                                    <ExternalLink size={20} className="res-drive-arrow" />
-                                )}
-                            </a>
-                        ))}
+                                <span className="home-subject-name">{year.label}</span>
+                                <span className="home-subject-tag">
+                                    {year.semesters.length} Semesters
+                                </span>
+                                <ChevronRight size={16} className="home-subject-arrow" />
+                            </button>
+                        );
+                    })}
+                </div>
+            </section>
+
+            {/* ── Semester modal ───────────────── */}
+            {modalOpen && activeYear && (
+                <div className="modal-overlay" onClick={closeModal}>
+                    <div className="modal-card modal-open" onClick={(e) => e.stopPropagation()}>
+                        <button className="modal-close" onClick={closeModal} aria-label="Close">
+                            <X size={18} />
+                        </button>
+
+                        <div className="modal-icon-wrapper"
+                            style={{ background: meta.color, boxShadow: `0 10px 28px ${meta.glow}` }}>
+                            {(() => { const YI = activeYear.icon; return <YI size={30} strokeWidth={1.5} />; })()}
+                        </div>
+                        <h2 className="modal-title">{activeYear.label}</h2>
+                        <p className="modal-subtitle">Select your semester</p>
+
+                        <div className="semester-grid">
+                            {activeYear.semesters.map((sem) => (
+                                <button
+                                    key={sem.id}
+                                    className="semester-btn"
+                                    onClick={() => goToSem(sem.id)}
+                                >
+                                    <span className="sem-label">{sem.label}</span>
+                                    <ChevronRight size={18} className="sem-arrow" />
+                                </button>
+                            ))}
+                        </div>
                     </div>
-                </main>
-            </div>
+                </div>
+            )}
+
+            {/* ── Footer ───────────────────────── */}
+            <footer className="home-footer">
+                <p className="home-footer-disclaimer">
+                    This platform is dedicated strictly to educational purposes.
+                </p>
+                <div className="home-footer-brand">
+                    <p className="home-footer-dev">DEVELOPED BY</p>
+                    <p className="home-footer-team">TEAM ASGARD</p>
+                    <p className="home-footer-batch">48TH BATCH UOJ SCIENCE</p>
+                </div>
+            </footer>
         </div>
     );
 }

@@ -89,7 +89,7 @@ export default function Home() {
       {/* ── Hero ─────────────────────────────── */}
       <section className="home-hero">
         <div className="home-badge">48th Batch · UOJ Science</div>
-        <h1 className="home-title">Edu Kuppi</h1>
+        <h1 className="home-title">Note Kuppi</h1>
         <p className="home-subtitle">
           Student guides for Statistics, Computing, and Science notes.
           <br />

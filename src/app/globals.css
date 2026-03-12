@@ -921,6 +921,251 @@ button {
 }
 
 /* ══════════════════════════════════════════════════════════
+   SUBJECT YEAR PAGE
+══════════════════════════════════════════════════════════ */
+
+.subj-year-page {
+  padding-top: 0;
+}
+
+/* ── Top bar on the year-selection page ──────────────────── */
+.subj-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 0 0;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.subj-topbar-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* ── Hero on year page ───────────────────────────────────── */
+.subj-hero {
+  margin-bottom: 2rem !important;
+}
+
+.subj-hero-icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin: 0 auto 1rem;
+}
+
+/* ── Year grid (2 × 2) ───────────────────────────────────── */
+.subj-year-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.subj-year-card {
+  min-height: 160px;
+}
+
+/* ══════════════════════════════════════════════════════════
+   SUBJECT / SEMESTER RESOURCE PAGE
+══════════════════════════════════════════════════════════ */
+
+/* sidebar folder link */
+.res-nav-folder-link {
+  color: var(--primary-light) !important;
+  font-size: 0.82rem !important;
+}
+
+/* ── Course grid ─────────────────────────────────────────── */
+.subj-course-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.subj-course-card {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 1.1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.subj-course-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+  background: radial-gradient(ellipse at 0% 50%, var(--card-glow, rgba(30,144,255,.15)) 0%, transparent 70%);
+}
+
+.subj-course-card:hover::before { opacity: 1; }
+
+.subj-course-card:hover {
+  transform: translateX(4px);
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 12px 32px rgba(0,0,0,.35);
+}
+
+.subj-course-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.subj-course-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.subj-course-code {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--primary-light);
+}
+
+.subj-course-name {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--text-main);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.subj-course-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.35rem;
+}
+
+.subj-course-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.62rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--text-muted);
+}
+
+.subj-course-pill--active {
+  background: rgba(30, 144, 255, 0.12);
+  border-color: rgba(30, 144, 255, 0.3);
+  color: var(--primary-light);
+}
+
+.subj-course-arrow {
+  color: var(--text-muted);
+  flex-shrink: 0;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: all 0.2s;
+  position: relative;
+  z-index: 1;
+}
+
+.subj-course-card:hover .subj-course-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── Category tabs (shown inside single-course view) ─────── */
+.subj-cat-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 1rem 0 1.5rem;
+}
+
+.subj-cat-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.subj-cat-tab:hover {
+  color: var(--text-main);
+  border-color: rgba(255,255,255,0.18);
+}
+
+.subj-cat-tab--active {
+  color: #fff !important;
+  border-color: transparent;
+}
+
+/* ── Back to courses button ──────────────────────────────── */
+.subj-back-to-courses {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: color 0.2s;
+}
+
+.subj-back-to-courses:hover { color: var(--text-main); }
+
+/* ── Empty state ─────────────────────────────────────────── */
+.subj-empty {
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+/* ══════════════════════════════════════════════════════════
    STAR BACKGROUND
 ══════════════════════════════════════════════════════════ */
 .star-container {
@@ -1045,7 +1290,8 @@ button {
 }
 
 @media (max-width: 768px) {
-  .home-subject-grid {
+  .home-subject-grid,
+  .subj-year-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
