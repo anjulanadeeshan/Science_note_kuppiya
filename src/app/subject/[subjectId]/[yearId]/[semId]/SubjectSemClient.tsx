@@ -242,6 +242,25 @@ export default function SubjectSemClient({
                                 })}
                             </div>
 
+                            {/* Resource description (if available) */}
+                            {currentCat?.description && (
+                                <div style={{
+                                    padding: "1rem 1.25rem",
+                                    background: "rgba(99, 102, 241, 0.05)",
+                                    border: "1px solid rgba(99, 102, 241, 0.15)",
+                                    borderRadius: "0.75rem",
+                                    marginBottom: "1.5rem",
+                                    fontSize: "0.875rem",
+                                    lineHeight: "1.5",
+                                    color: "rgba(255, 255, 255, 0.7)",
+                                }}>
+                                    <div style={{ display: "flex", alignItems: "start", gap: "0.5rem" }}>
+                                        <span style={{ fontSize: "1.125rem", marginTop: "0.125rem" }}>💡</span>
+                                        <span>{currentCat.description}</span>
+                                    </div>
+                                </div>
+                            )}
+
                             <div className="res-card-grid" style={{ gridTemplateColumns: "1fr" }}>
                                 {renderResourceCard(activeCourse)}
                             </div>

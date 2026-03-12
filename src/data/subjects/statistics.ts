@@ -23,7 +23,12 @@ const statistics: SubjectData = {
             name: "Mr. A. Laheetharan",
             resources: [
               { key: "notes", label: "Notes", url: "https://drive.google.com/drive/folders/1rBrJGdC_rvnkbM4bUV3LTibSg_jEid7W?usp=sharing" },
-              { key: "tutorials", label: "Tutorials", url: "#" },
+              { 
+                key: "Additional-resources", 
+                label: "Additional Resources", 
+                url: "https://drive.google.com/file/d/1K87tkj2KOYRht5atRSnBDKiIwBe9U4t-/view?usp=drive_link",
+                description: "This is only a additional resourse recommended by 48th Booster brother. This will only help to understand core concepts, don't depend only on this resourse."
+              },
               { key: "icas", label: "ICAs", url: "#" },
               { key: "pastpapers", label: "Past Papers", url: "#" },
             ],

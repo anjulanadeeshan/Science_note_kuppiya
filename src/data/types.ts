@@ -12,6 +12,7 @@ export type ResourceCategory = {
   key: string;
   label: string;
   url: string;
+  description?: string; // Optional note explaining what this resource contains
 };
 
 /**
