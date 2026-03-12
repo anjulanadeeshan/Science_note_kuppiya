@@ -36,7 +36,7 @@ const computerScience: SubjectData = {
               {
                 key: "notes",
                 label: "Notes",
-                url: "https://drive.google.com/drive/folders/1bRxc8gwXQ2T6UGCo2akdYX08E7rGMqZB?usp=drive_link",
+                url: "https://drive.google.com/drive/folders/1ATBCtYXADi1vhsAGz89H3r_z5i4GE5gN?usp=drive_link",
               },
               {
                 key: "tutorials",
@@ -62,7 +62,7 @@ const computerScience: SubjectData = {
               {
                 key: "notes",
                 label: "Notes",
-                url: "https://drive.google.com/drive/folders/1HhmK1DM9USwxz3RW6eDlMxPtZESzX61U?usp=drive_link",
+                url: "https://drive.google.com/drive/folders/19QEn8cJ91BUrNK2XCXOEuFeW_n6Vyf_e?usp=drive_link",
               },
               {
                 key: "tutorials",
@@ -88,7 +88,7 @@ const computerScience: SubjectData = {
               {
                 key: "notes",
                 label: "Notes",
-                url: "https://drive.google.com/drive/folders/1eeoVx89Ro_7mZXQ5BINkQFeJimjotR0O?usp=drive_link",
+                url: "https://drive.google.com/drive/folders/1Kgor7uDFpqEnTKokACk_E34USuVPznaF?usp=drive_link",
               },
               { key: "tutorials", label: "Tutorials", url: "" },
               {
