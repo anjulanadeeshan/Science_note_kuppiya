@@ -37,7 +37,7 @@ const subjects: Subject[] = [
   {
     id: "pure-mathematics",
     name: "Pure Mathematics",
-    shortName: "PM",
+    shortName: "PMM",
     icon: BookOpen,
     color: "linear-gradient(135deg, #0891b2 0%, #06b6d4 100%)",
     glow: "rgba(8, 145, 178, 0.3)",
@@ -45,7 +45,7 @@ const subjects: Subject[] = [
   {
     id: "applied-mathematics",
     name: "Applied Mathematics",
-    shortName: "AM",
+    shortName: "AMM",
     icon: Zap,
     color: "linear-gradient(135deg, #d97706 0%, #f59e0b 100%)",
     glow: "rgba(217, 119, 6, 0.3)",

@@ -104,13 +104,23 @@ const statistics: SubjectData = {
         driveFolder: "https://drive.google.com/drive/folders/19046d9nFFsi3YCmVmT2dRiIF2xsYrhNS?usp=sharing",
         courses: [
           {
-            code: "STA2xx",
-            name: "Subject Name",          // ← update when confirmed
+            code: "STA203G3",
+            name: "Dr. R. Tharshan",          // ← update when confirmed
             resources: [
-              { key: "notes", label: "Notes", url: "#" },
+              { key: "notes", label: "Notes", url: "https://drive.google.com/drive/folders/1GE2Fd-cFEdVUSHhPErqtsJc9KyfcgrRh?usp=drive_link" },
               { key: "tutorials", label: "Tutorials", url: "#" },
               { key: "icas", label: "ICAs", url: "#" },
-              { key: "pastpapers", label: "Past Papers", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "https://drive.google.com/drive/folders/1vsA2Kiz4GxVeKo5o-c4iF67MiqstVF7V?usp=drive_link" },
+            ],
+          },
+          {
+            code: "STA204G3",
+            name: "Mr. A. Laheetharan",          // ← update when confirmed
+            resources: [
+              { key: "notes", label: "Notes", url: "https://drive.google.com/drive/folders/17myTpA3UNbg0x9bGUjE9z_cf22wCS_SZ?usp=drive_link" },
+              { key: "tutorials", label: "Tutorials", url: "https://drive.google.com/drive/folders/1-PmKZ8eHApCq_U0kG2OBQxrtGq-NXHaO?usp=drive_link" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "https://drive.google.com/drive/folders/1K6QMZpd9IQd9_00lsDUG9Fua4_N2rBjg?usp=drive_link" },
             ],
           },
         ],
