@@ -41,6 +41,7 @@ const subjects: Subject[] = [
     icon: BookOpen,
     color: "linear-gradient(135deg, #0891b2 0%, #06b6d4 100%)",
     glow: "rgba(8, 145, 178, 0.3)",
+    disabled: true,
   },
   {
     id: "applied-mathematics",
@@ -49,6 +50,7 @@ const subjects: Subject[] = [
     icon: Zap,
     color: "linear-gradient(135deg, #d97706 0%, #f59e0b 100%)",
     glow: "rgba(217, 119, 6, 0.3)",
+    disabled: true,
   },
   {
     id: "chemistry",
@@ -57,6 +59,7 @@ const subjects: Subject[] = [
     icon: FlaskConical,
     color: "linear-gradient(135deg, #059669 0%, #10b981 100%)",
     glow: "rgba(5, 150, 105, 0.3)",
+    disabled: true,
   },
   {
     id: "physics",
@@ -65,6 +68,7 @@ const subjects: Subject[] = [
     icon: Atom,
     color: "linear-gradient(135deg, #e11d48 0%, #f43f5e 100%)",
     glow: "rgba(225, 29, 72, 0.3)",
+    disabled: true,
   },
   {
     id: "biology",
@@ -73,6 +77,7 @@ const subjects: Subject[] = [
     icon: Leaf,
     color: "linear-gradient(135deg, #16a34a 0%, #4ade80 100%)",
     glow: "rgba(22, 163, 74, 0.3)",
+    disabled: true,
   },
 ];
 
