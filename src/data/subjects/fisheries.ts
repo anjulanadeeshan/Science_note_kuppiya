@@ -1,11 +1,6 @@
-/**
- * BIOLOGY — resource data
- * Replace "#" with the Google Drive sharing URL for each resource.
- */
-
 import type { SubjectData } from "../types";
 
-const biology: SubjectData = {
+const fisheries: SubjectData = {
   "1st-year": {
     label: "1st Year",
     semesters: {
@@ -14,8 +9,8 @@ const biology: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "BIO101",
-            name: "Cell Biology",
+            code: "FIS101",
+            name: "Introduction to Fisheries",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -24,8 +19,8 @@ const biology: SubjectData = {
             ],
           },
           {
-            code: "BIO102",
-            name: "Botany I",
+            code: "FIS102",
+            name: "Aquatic Biology",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -40,8 +35,8 @@ const biology: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "BIO103",
-            name: "Genetics",
+            code: "FIS103",
+            name: "Fish Physiology",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -50,8 +45,8 @@ const biology: SubjectData = {
             ],
           },
           {
-            code: "BIO104",
-            name: "Zoology I",
+            code: "FIS104",
+            name: "Fishing Technology",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -71,8 +66,8 @@ const biology: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "BIO201",
-            name: "Biochemistry",
+            code: "FIS201",
+            name: "Aquaculture",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -81,8 +76,8 @@ const biology: SubjectData = {
             ],
           },
           {
-            code: "BIO202",
-            name: "Microbiology",
+            code: "FIS202",
+            name: "Fish Nutrition",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -97,8 +92,8 @@ const biology: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "BIO203",
-            name: "Ecology",
+            code: "FIS203",
+            name: "Fish Pathology",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -107,8 +102,8 @@ const biology: SubjectData = {
             ],
           },
           {
-            code: "BIO204",
-            name: "Physiology",
+            code: "FIS204",
+            name: "Fisheries Management",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -128,8 +123,8 @@ const biology: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "BIO301",
-            name: "Molecular Biology",
+            code: "FIS301",
+            name: "Marine Biology",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -138,8 +133,8 @@ const biology: SubjectData = {
             ],
           },
           {
-            code: "BIO302",
-            name: "Evolutionary Biology",
+            code: "FIS302",
+            name: "Fish Ecology",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -154,8 +149,8 @@ const biology: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "BIO303",
-            name: "Biotechnology",
+            code: "FIS303",
+            name: "Post-Harvest Technology",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -164,8 +159,8 @@ const biology: SubjectData = {
             ],
           },
           {
-            code: "BIO304",
-            name: "Bioinformatics",
+            code: "FIS304",
+            name: "Fisheries Economics",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -186,4 +181,4 @@ const biology: SubjectData = {
   },
 };
 
-export default biology;
+export default fisheries;

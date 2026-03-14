@@ -8,7 +8,8 @@ export function generateStaticParams() {
         { subjectId: "applied-mathematics" },
         { subjectId: "chemistry" },
         { subjectId: "physics" },
-        { subjectId: "biology" },
+        { subjectId: "boteny" },
+        { subjectId: "fisheries" },
     ];
 }
 

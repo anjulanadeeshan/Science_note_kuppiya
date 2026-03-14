@@ -4,7 +4,7 @@ import SubjectSemClient from "./SubjectSemClient";
 export function generateStaticParams() {
     const subjects = [
         "computer-science", "statistics", "pure-mathematics",
-        "applied-mathematics", "chemistry", "physics", "biology",
+        "applied-mathematics", "chemistry", "physics", "boteny", "fisheries",
     ];
     const years = ["1st-year", "2nd-year", "3rd-year", "4th-year"];
     const sems  = ["sem1", "sem2"];

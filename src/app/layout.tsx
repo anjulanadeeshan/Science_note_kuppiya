@@ -14,7 +14,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Note Kuppi | By 48th Batch",
-  description: "Notes, tutorials, ICAs and past papers for CS, Statistics, Mathematics, Chemistry, Physics and Biology — 48th Batch UOJ Science.",
+  description: "Notes, tutorials, ICAs and past papers for CS, Statistics, Mathematics, Chemistry, Physics, Boteny and Fisheries — 48th Batch UOJ Science.",
   icons: {
     icon: "/ico.png",
   },

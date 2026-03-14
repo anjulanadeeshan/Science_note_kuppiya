@@ -3,7 +3,7 @@
 import {
     ArrowLeft, Users, BookOpen, BarChart2,
     GraduationCap, Monitor, Zap, FlaskConical,
-    Atom, Leaf, ChevronRight, X, Search,
+    Atom, Leaf, Fish, ChevronRight, X, Search,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -20,9 +20,10 @@ export const subjectMeta: Record<string, {
     "statistics":          { name: "Statistics",          shortName: "STAT", color: "linear-gradient(135deg,#7c3aed,#a855f7)", glow: "rgba(124,58,237,.35)",  icon: BarChart2     },
     "pure-mathematics":    { name: "Pure Mathematics",    shortName: "PMM",   color: "linear-gradient(135deg,#0891b2,#06b6d4)", glow: "rgba(8,145,178,.35)",   icon: BookOpen      },
     "applied-mathematics": { name: "Applied Mathematics", shortName: "AMM",   color: "linear-gradient(135deg,#d97706,#f59e0b)", glow: "rgba(217,119,6,.35)",   icon: Zap           },
-    "chemistry":           { name: "Chemistry",           shortName: "CHE", color: "linear-gradient(135deg,#059669,#10b981)", glow: "rgba(5,150,105,.35)",   icon: FlaskConical  },
     "physics":             { name: "Physics",             shortName: "PHY",  color: "linear-gradient(135deg,#e11d48,#f43f5e)", glow: "rgba(225,29,72,.35)",   icon: Atom          },
-    "biology":             { name: "Biology",             shortName: "BIO",  color: "linear-gradient(135deg,#16a34a,#4ade80)", glow: "rgba(22,163,74,.35)",   icon: Leaf          },
+    "chemistry":           { name: "Chemistry",           shortName: "CHE", color: "linear-gradient(135deg,#059669,#10b981)", glow: "rgba(5,150,105,.35)",   icon: FlaskConical  },
+    "boteny":              { name: "Boteny",              shortName: "BOT",  color: "linear-gradient(135deg,#16a34a,#4ade80)", glow: "rgba(22,163,74,.35)",   icon: Leaf          },
+    "fisheries":           { name: "Fisheries",           shortName: "FIS",  color: "linear-gradient(135deg,#0284c7,#38bdf8)", glow: "rgba(2,132,199,.35)",    icon: Fish          },
 };
 
 /* ── Year / semester definitions (same for all subjects) ──── */

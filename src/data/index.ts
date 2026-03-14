@@ -17,7 +17,8 @@ import pureMathematics    from "./subjects/pure-mathematics";
 import appliedMathematics from "./subjects/applied-mathematics";
 import chemistry          from "./subjects/chemistry";
 import physics            from "./subjects/physics";
-import biology            from "./subjects/biology";
+import boteny             from "./subjects/boteny";
+import fisheries          from "./subjects/fisheries";
 
 import type { SubjectData } from "./types";
 
@@ -29,5 +30,6 @@ export const resourceData: Record<string, SubjectData> = {
   "applied-mathematics": appliedMathematics,
   "chemistry":           chemistry,
   "physics":             physics,
-  "biology":             biology,
+  "boteny":              boteny,
+  "fisheries":           fisheries,
 };

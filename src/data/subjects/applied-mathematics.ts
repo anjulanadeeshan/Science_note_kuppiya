@@ -1,9 +1,12 @@
-/**
- * APPLIED MATHEMATICS — resource data
- * Replace "#" with the Google Drive sharing URL for each resource.
- */
-
 import type { SubjectData } from "../types";
+
+const defaultResources = [
+  { key: "notes", label: "Notes", url: "#" },
+  { key: "tutorials", label: "Tutorials", url: "#" },
+  { key: "additional", label: "Additional Resources", url: "#" },
+  { key: "icas", label: "ICAs", url: "#" },
+  { key: "pastpapers", label: "Past Papers", url: "#" },
+];
 
 const appliedMathematics: SubjectData = {
   "1st-year": {
@@ -14,24 +17,14 @@ const appliedMathematics: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "AM101",
-            name: "Mechanics I",
-            resources: [
-              { key: "notes", label: "Notes", url: "#" },
-              { key: "tutorials", label: "Tutorials", url: "#" },
-              { key: "icas", label: "ICAs", url: "#" },
-              { key: "pastpapers", label: "Past Papers", url: "#" },
-            ],
+            code: "AMM101G3",
+            name: "Applied Methods I",
+            resources: defaultResources,
           },
           {
-            code: "AM102",
-            name: "Statics",
-            resources: [
-              { key: "notes", label: "Notes", url: "#" },
-              { key: "tutorials", label: "Tutorials", url: "#" },
-              { key: "icas", label: "ICAs", url: "#" },
-              { key: "pastpapers", label: "Past Papers", url: "#" },
-            ],
+            code: "AMM102G2",
+            name: "Mechanics I",
+            resources: defaultResources,
           },
         ],
       },
@@ -40,24 +33,14 @@ const appliedMathematics: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "AM103",
-            name: "Mechanics II",
-            resources: [
-              { key: "notes", label: "Notes", url: "#" },
-              { key: "tutorials", label: "Tutorials", url: "#" },
-              { key: "icas", label: "ICAs", url: "#" },
-              { key: "pastpapers", label: "Past Papers", url: "#" },
-            ],
+            code: "AMM103G3",
+            name: "Applied Methods II",
+            resources: defaultResources,
           },
           {
-            code: "AM104",
-            name: "Dynamics",
-            resources: [
-              { key: "notes", label: "Notes", url: "#" },
-              { key: "tutorials", label: "Tutorials", url: "#" },
-              { key: "icas", label: "ICAs", url: "#" },
-              { key: "pastpapers", label: "Past Papers", url: "#" },
-            ],
+            code: "AMM104G2",
+            name: "Mechanics II",
+            resources: defaultResources,
           },
         ],
       },
@@ -71,24 +54,14 @@ const appliedMathematics: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "AM201",
-            name: "Ordinary Differential Equations",
-            resources: [
-              { key: "notes", label: "Notes", url: "#" },
-              { key: "tutorials", label: "Tutorials", url: "#" },
-              { key: "icas", label: "ICAs", url: "#" },
-              { key: "pastpapers", label: "Past Papers", url: "#" },
-            ],
+            code: "AMM201G3",
+            name: "Mathematical Methods",
+            resources: defaultResources,
           },
           {
-            code: "AM202",
-            name: "Numerical Methods",
-            resources: [
-              { key: "notes", label: "Notes", url: "#" },
-              { key: "tutorials", label: "Tutorials", url: "#" },
-              { key: "icas", label: "ICAs", url: "#" },
-              { key: "pastpapers", label: "Past Papers", url: "#" },
-            ],
+            code: "AMM202G2",
+            name: "Fluid Dynamics",
+            resources: defaultResources,
           },
         ],
       },
@@ -97,24 +70,14 @@ const appliedMathematics: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "AM203",
-            name: "Partial Differential Equations",
-            resources: [
-              { key: "notes", label: "Notes", url: "#" },
-              { key: "tutorials", label: "Tutorials", url: "#" },
-              { key: "icas", label: "ICAs", url: "#" },
-              { key: "pastpapers", label: "Past Papers", url: "#" },
-            ],
+            code: "AMM203G3",
+            name: "Linear Programming",
+            resources: defaultResources,
           },
           {
-            code: "AM204",
-            name: "Mathematical Modelling",
-            resources: [
-              { key: "notes", label: "Notes", url: "#" },
-              { key: "tutorials", label: "Tutorials", url: "#" },
-              { key: "icas", label: "ICAs", url: "#" },
-              { key: "pastpapers", label: "Past Papers", url: "#" },
-            ],
+            code: "AMM204G2",
+            name: "Linear Algebra and Analytic Geometry",
+            resources: defaultResources,
           },
         ],
       },
@@ -128,24 +91,14 @@ const appliedMathematics: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "AM301",
-            name: "Fluid Dynamics",
-            resources: [
-              { key: "notes", label: "Notes", url: "#" },
-              { key: "tutorials", label: "Tutorials", url: "#" },
-              { key: "icas", label: "ICAs", url: "#" },
-              { key: "pastpapers", label: "Past Papers", url: "#" },
-            ],
+            code: "AMM301G3",
+            name: "Mathematical Programming",
+            resources: defaultResources,
           },
           {
-            code: "AM302",
-            name: "Continuum Mechanics",
-            resources: [
-              { key: "notes", label: "Notes", url: "#" },
-              { key: "tutorials", label: "Tutorials", url: "#" },
-              { key: "icas", label: "ICAs", url: "#" },
-              { key: "pastpapers", label: "Past Papers", url: "#" },
-            ],
+            code: "AMM302G3",
+            name: "Classical Mechanics",
+            resources: defaultResources,
           },
         ],
       },
@@ -154,24 +107,19 @@ const appliedMathematics: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "AM303",
-            name: "Control Theory",
-            resources: [
-              { key: "notes", label: "Notes", url: "#" },
-              { key: "tutorials", label: "Tutorials", url: "#" },
-              { key: "icas", label: "ICAs", url: "#" },
-              { key: "pastpapers", label: "Past Papers", url: "#" },
-            ],
+            code: "AMM303G2",
+            name: "Numerical Methods",
+            resources: defaultResources,
           },
           {
-            code: "AM304",
-            name: "Operations Research",
-            resources: [
-              { key: "notes", label: "Notes", url: "#" },
-              { key: "tutorials", label: "Tutorials", url: "#" },
-              { key: "icas", label: "ICAs", url: "#" },
-              { key: "pastpapers", label: "Past Papers", url: "#" },
-            ],
+            code: "AMM304G2",
+            name: "Fluid Dynamics II",
+            resources: defaultResources,
+          },
+          {
+            code: "AMM305G2",
+            name: "Mathematical Modeling",
+            resources: defaultResources,
           },
         ],
       },
