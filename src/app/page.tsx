@@ -47,7 +47,6 @@ const subjects: Subject[] = [
     icon: BookOpen,
     color: "linear-gradient(135deg, #0891b2 0%, #06b6d4 100%)",
     glow: "rgba(8, 145, 178, 0.3)",
-    disabled: true,
   },
   {
     id: "applied-mathematics",
