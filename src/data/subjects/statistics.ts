@@ -29,6 +29,7 @@ const statistics: SubjectData = {
                 url: "https://drive.google.com/file/d/1K87tkj2KOYRht5atRSnBDKiIwBe9U4t-/view?usp=drive_link",
                 description: "This is only an additional resourse recommended by 48th Booster. This will only help to understand core concepts, don't depend only on this resourse."
               },
+              { key: "tutorials", label: "Tutorials", url: "https://drive.google.com/drive/folders/1Jm2Y4se3tZ_svpqdlIUcw63uz41By_DN?usp=drive_link"},
               { key: "icas", label: "ICAs", url: "https://drive.google.com/drive/folders/1ZlDqq50zSvViklTao1MjN3F_z_RbPiRj?usp=drive_link" },
               { key: "pastpapers", label: "Past Papers", url: "https://drive.google.com/drive/folders/1DXI4LB5hyYqpsvobTZulK5ygpuOauCf_?usp=drive_link" },
             ],
@@ -40,6 +41,7 @@ const statistics: SubjectData = {
               { key: "notes", label: "Notes", url: "https://drive.google.com/drive/folders/1VBFNsp0KNyO33wSNg9wOviv57PdOQHU1?usp=sharing", description: "Currently we don't have notes for this subject. In the near future we will supply the notes" },
               { key: "icas", label: "ICAs", url: "https://drive.google.com/drive/folders/1o1aRiInNEyrtLXOTJlSNqgSoFQqB9aPt?usp=drive_link" },
               { key: "pastpapers", label: "Past Papers", url: "https://drive.google.com/drive/folders/1CUaRewDLaJqja9cBdIXn1DNvZO3046oE?usp=drive_link" },
+              { key: "tutorials", label: "Tutorials", url: "https://drive.google.com/drive/folders/1K-5WLZSViSB2qIqvnUTsxOomWNIrYTb0?usp=drive_link" },
             ],
           },
         ],
