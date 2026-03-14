@@ -4,7 +4,7 @@ Centralized resource platform for undergraduate students to access notes, tutori
 
 ## Live Website
 
-`https://note-kuppi.netlify.app/`
+[https://note-kuppi.netlify.app/](https://note-kuppi.netlify.app/)
 
 ## Project Goal
 
