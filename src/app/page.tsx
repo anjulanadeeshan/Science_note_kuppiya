@@ -1,8 +1,14 @@
 "use client";
 
 import {
-  Monitor, BarChart2, BookOpen, Zap,
-  FlaskConical, Atom, Leaf, Plus,
+  Monitor,
+  BarChart2,
+  BookOpen,
+  Zap,
+  FlaskConical,
+  Atom,
+  Leaf,
+  Plus,
   ArrowRight,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
@@ -83,6 +89,7 @@ const subjects: Subject[] = [
 
 export default function Home() {
   const router = useRouter();
+  const feedbackFormUrl = "https://forms.gle/your-feedback-form-link";
 
   const handleSubjectClick = (subject: Subject) => {
     if (subject.disabled) return;
@@ -95,15 +102,20 @@ export default function Home() {
       <section className="home-hero">
         <h1 className="home-title">Note Kuppi</h1>
         <p className="home-subtitle">
-          <span className="home-subtitle-lang">සෑම සටහනක්ම එකම තැනක.  | </span> 
-          <span className="home-subtitle-lang">ஒவ்வொரு குறிப்பும் ஒரே இடத்தில்..</span>
+          <span className="home-subtitle-lang">සෑම සටහනක්ම එකම තැනක. | </span>
+          <span className="home-subtitle-lang">
+            ஒவ்வொரு குறிப்பும் ஒரே இடத்தில்..
+          </span>
           <br />
-          <span className="home-subtitle-creator">Created by 48th Batch UOJ Science</span>
+          <span className="home-subtitle-creator">
+            Created by 48th Batch UOJ Science
+          </span>
         </p>
 
         <div className="home-quote">
           <p className="home-quote-text">
-            &ldquo;If you can&apos;t explain it simply, you don&apos;t understand it well enough.&rdquo;
+            &ldquo;If you can&apos;t explain it simply, you don&apos;t
+            understand it well enough.&rdquo;
           </p>
           <span className="home-quote-author">— ALBERT EINSTEIN</span>
           <div className="home-quote-bar" />
@@ -115,7 +127,8 @@ export default function Home() {
         <div className="home-section-header">
           <h2 className="home-section-title">Select Your Subject</h2>
           <p className="home-section-desc">
-            Access comprehensive notes, tutorials, ICAs, and past papers for your degree program.
+            Access comprehensive notes, tutorials, ICAs, and past papers for
+            your degree program.
           </p>
         </div>
 
@@ -136,7 +149,10 @@ export default function Home() {
                 )}
                 <div
                   className="home-subject-icon"
-                  style={{ background: subject.color, boxShadow: `0 8px 24px ${subject.glow}` }}
+                  style={{
+                    background: subject.color,
+                    boxShadow: `0 8px 24px ${subject.glow}`,
+                  }}
                 >
                   <Icon size={32} strokeWidth={1.5} />
                 </div>
@@ -154,17 +170,76 @@ export default function Home() {
             <div className="home-subject-icon home-subject-icon--more">
               <Plus size={28} strokeWidth={1.5} />
             </div>
-            <span className="home-subject-name home-subject-name--muted">More Subjects</span>
-            <span className="home-coming-soon home-coming-soon--inline">COMING SOON</span>
+            <span className="home-subject-name home-subject-name--muted">
+              More Subjects
+            </span>
+            <span className="home-coming-soon home-coming-soon--inline">
+              COMING SOON
+            </span>
           </div>
+        </div>
+      </section>
+
+      {/* ── Announcements ───────────────────── */}
+      <section
+        className="home-announcement-section"
+        aria-labelledby="home-announcement-title"
+      >
+        <div className="home-announcement-head">
+          <h2 id="home-announcement-title" className="home-announcement-title">
+            Website Announcement
+          </h2>
+          <span className="home-announcement-badge">Important Notice 🛑</span>
+        </div>
+
+        <div className="home-announcement-card">
+          <p>
+            This website was developed to support undergraduate students by
+            providing
+            <strong>
+              {" "}
+              notes, past papers, and additional learning resources in one place
+            </strong>
+            . Our goal is to help students easily access study materials and use
+            them as supportive resources.
+          </p>
+
+          <p>
+            Please note that some lecturers may prefer
+            <strong> not to publicly share their lecture slides</strong> as
+            their teaching materials and methods are unique. Kindly use the
+            resources on this website responsibly and only for academic support.
+          </p>
+
+          <p>
+            All rights to the lecture slides and past papers remain with the
+            <strong> respective lecturers or creators</strong>. Please do not
+            misuse these materials.
+          </p>
+
+          <p>
+            We would greatly appreciate your <strong>valuable feedback</strong>{" "}
+            to help us improve this website.
+          </p>
+
+          <a
+            href={feedbackFormUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="home-feedback-btn"
+            aria-label="Open feedback form in a new tab"
+          >
+            Share Your Feedback
+          </a>
         </div>
       </section>
 
       {/* ── Footer ───────────────────────────── */}
       <footer className="home-footer">
         <p className="home-footer-disclaimer">
-          This platform is dedicated strictly to educational purposes. Our mission is to provide
-          students with seamless access to study materials and resources.
+          This platform is dedicated strictly to educational purposes. Our
+          mission is to provide students with seamless access to study materials
+          and resources.
         </p>
         <div className="home-footer-brand">
           <p className="home-footer-dev">DEVELOPED BY</p>
