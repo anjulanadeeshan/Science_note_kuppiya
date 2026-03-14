@@ -9,8 +9,8 @@ const boteny: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "BOT101",
-            name: "Botany I",
+            code: "BOA101G2",
+            name: "Basic Biology",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -19,8 +19,8 @@ const boteny: SubjectData = {
             ],
           },
           {
-            code: "BOT102",
-            name: "Plant Diversity",
+            code: "BOA102G2",
+            name: "Plant Diversity I",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -35,8 +35,8 @@ const boteny: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "BOT103",
-            name: "Plant Physiology",
+            code: "BOA103G2",
+            name: "Plant Diversity II",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -45,8 +45,18 @@ const boteny: SubjectData = {
             ],
           },
           {
-            code: "BOT104",
-            name: "Genetics for Botany",
+            code: "BOA104G2",
+            name: "General Microbiology",
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
+          },
+          {
+            code: "BOA105G2",
+            name: "Molecular Biology and Biotechnology",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -66,8 +76,8 @@ const boteny: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "BOT201",
-            name: "Plant Anatomy",
+            code: "BOA201G2",
+            name: "Plant Morphology and Anatomy",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -76,8 +86,8 @@ const boteny: SubjectData = {
             ],
           },
           {
-            code: "BOT202",
-            name: "Microbiology for Plants",
+            code: "BOA202G2",
+            name: "Plant Systematics",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -92,8 +102,8 @@ const boteny: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "BOT203",
-            name: "Plant Ecology",
+            code: "BOA203G2",
+            name: "Biochemistry",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -102,8 +112,8 @@ const boteny: SubjectData = {
             ],
           },
           {
-            code: "BOT204",
-            name: "Plant Biotechnology",
+            code: "BOA204G2",
+            name: "Genetics",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -123,8 +133,8 @@ const boteny: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "BOT301",
-            name: "Advanced Botany",
+            code: "BOA301G2",
+            name: "Plant Ecology",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -133,8 +143,28 @@ const boteny: SubjectData = {
             ],
           },
           {
-            code: "BOT302",
-            name: "Molecular Botany",
+            code: "BOA302G2",
+            name: "Plant Pathology",
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
+          },
+          {
+            code: "BOA303G2",
+            name: "Natural vegetation types of Sri Lanka",
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
+          },
+          {
+            code: "BOA304G2",
+            name: "Plant Physiology",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -149,8 +179,8 @@ const boteny: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "BOT303",
-            name: "Plant Systematics",
+            code: "BOA305G2",
+            name: "Plant tissue culture",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -159,8 +189,28 @@ const boteny: SubjectData = {
             ],
           },
           {
-            code: "BOT304",
-            name: "Conservation Botany",
+            code: "BOA306G2",
+            name: "Biostatistics",
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
+          },
+          {
+            code: "FSN301G3",
+            name: "Food science and nutrition I",
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
+          },
+          {
+            code: "FSN302G3",
+            name: "Food science and nutrition II",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },

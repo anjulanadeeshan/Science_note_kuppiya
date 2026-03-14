@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Note Kuppi
 
-## Getting Started
+Centralized resource platform for undergraduate students to access notes, tutorials, ICAs, past papers, and additional learning materials in one place.
 
-First, run the development server:
+## Live Website
+
+`https://note-kuppi.netlify.app/`
+
+## Project Goal
+
+This website was developed to help students quickly find and use academic support materials.
+
+Resources are shared for educational support purposes only. Please use all materials responsibly and respect ownership of lecture notes, slides, and past papers.
+
+## Current Subjects
+
+- Computer Science
+- Statistics
+- Pure Mathematics
+- Applied Mathematics
+- Chemistry
+- Physics
+- Boteny
+- Fisheries
+
+## Tech Stack
+
+- Next.js 16 (App Router)
+- React 19
+- TypeScript
+- ESLint
+- Lucide Icons
+
+## Run Locally
+
+```bash
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000` in your browser.
+
+## Available Scripts
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm run start
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+src/
+	app/                 # Routes and UI pages
+	components/          # Shared components
+	data/
+		index.ts           # Central subject data registry
+		subjects/          # Subject-wise course/resource data
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Feedback
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Feedback from students and contributors is highly appreciated to improve this platform.

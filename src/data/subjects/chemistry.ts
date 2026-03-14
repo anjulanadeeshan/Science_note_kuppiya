@@ -14,8 +14,8 @@ const chemistry: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "CHM101",
-            name: "General Chemistry I",
+            code: "CHE101G2",
+            name: "General Chemistry",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -24,8 +24,18 @@ const chemistry: SubjectData = {
             ],
           },
           {
-            code: "CHM102",
-            name: "Inorganic Chemistry I",
+            code: "CHE102G2",
+            name: "Foundations of Physical Chemistry",
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
+          },
+          {
+            code: "CHE103G1",
+            name: "Chemistry of Periodic Elements",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -40,8 +50,8 @@ const chemistry: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "CHM103",
-            name: "General Chemistry II",
+            code: "CHE104G3",
+            name: "Organic Chemistry I",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -50,8 +60,18 @@ const chemistry: SubjectData = {
             ],
           },
           {
-            code: "CHM104",
-            name: "Organic Chemistry I",
+            code: "CHE105G1",
+            name: "Inorganic Chemistry Laboratory I",
+            resources: [
+              { key: "notes", label: "Notes", url: "#" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
+          },
+          {
+            code: "CHE106G1",
+            name: "Organic and Physical Chemistry Laboratory I",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -71,8 +91,8 @@ const chemistry: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "CHM201",
-            name: "Organic Chemistry II",
+            code: "CHE201G2",
+            name: "Coordination and Organometallic Chemistry",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -81,8 +101,8 @@ const chemistry: SubjectData = {
             ],
           },
           {
-            code: "CHM202",
-            name: "Physical Chemistry I",
+            code: "CHE202G3",
+            name: "Quantum Mechanical Approach to Atomic and Molecular Structure and Molecular Spectroscopy",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -97,8 +117,8 @@ const chemistry: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "CHM203",
-            name: "Inorganic Chemistry II",
+            code: "CHE203G2",
+            name: "Organic Chemistry II",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -107,8 +127,8 @@ const chemistry: SubjectData = {
             ],
           },
           {
-            code: "CHM204",
-            name: "Analytical Chemistry",
+            code: "CHE204G3",
+            name: "Inorganic and Organic Chemistry Laboratory II",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -128,8 +148,8 @@ const chemistry: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "CHM301",
-            name: "Physical Chemistry II",
+            code: "CHE301G3",
+            name: "Analytical Chemistry & Industrial Chemistry",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -138,8 +158,8 @@ const chemistry: SubjectData = {
             ],
           },
           {
-            code: "CHM302",
-            name: "Spectroscopy",
+            code: "CHE302G3",
+            name: "Electrochemistry, Chemical Kinetics and Surface Chemistry",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -154,8 +174,8 @@ const chemistry: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "CHM303",
-            name: "Biochemistry",
+            code: "CHE303G3",
+            name: "Organic Chemistry III",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
@@ -164,8 +184,8 @@ const chemistry: SubjectData = {
             ],
           },
           {
-            code: "CHM304",
-            name: "Environmental Chemistry",
+            code: "CHE304G3",
+            name: "Physical, Inorganic and Organic Laboratory III",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
