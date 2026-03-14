@@ -193,17 +193,6 @@ export default function Home() {
 
         <div className="home-announcement-card">
           <p>
-            This website was developed to support undergraduate students by
-            providing
-            <strong>
-              {" "}
-              notes, past papers, and additional learning resources in one place
-            </strong>
-            . Our goal is to help students easily access study materials and use
-            them as supportive resources.
-          </p>
-
-          <p>
             Please note that some lecturers may prefer
             <strong> not to publicly share their lecture slides</strong> as
             their teaching materials and methods are unique. Kindly use the
@@ -235,6 +224,11 @@ export default function Home() {
 
       {/* ── Footer ───────────────────────────── */}
       <footer className="home-footer">
+        <p className="home-footer-disclaimer">
+          This platform is dedicated strictly to educational purposes. Our
+          mission is to provide students with seamless access to study materials
+          and resources.
+        </p>
         <div className="home-footer-brand">
           <p className="home-footer-dev">DEVELOPED BY</p>
           <p className="home-footer-team">TEAM ASGARD</p>
