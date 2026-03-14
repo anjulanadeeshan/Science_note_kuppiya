@@ -174,18 +174,6 @@ export default function Home() {
             );
           })}
 
-          {/* More Subjects placeholder */}
-          <div className="home-subject-card home-subject-card--more">
-            <div className="home-subject-icon home-subject-icon--more">
-              <Plus size={28} strokeWidth={1.5} />
-            </div>
-            <span className="home-subject-name home-subject-name--muted">
-              More Subjects
-            </span>
-            <span className="home-coming-soon home-coming-soon--inline">
-              COMING SOON
-            </span>
-          </div>
         </div>
       </section>
 
