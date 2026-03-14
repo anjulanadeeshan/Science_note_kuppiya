@@ -722,8 +722,8 @@ const computerScience: SubjectData = {
             name: "Data Communication and Computer Networks",
             resources: [
               { key: "notes", label: "Notes", url: "https://drive.google.com/drive/folders/17GP0bQ4IsltYDj4R1a9WCeEUZvHy-aho?usp=drive_link" },
-              { key: "hand_written", label: "Hand_written_notes", url: "#" },
-              { key: "icas", label: "ICAs", url: "#" },
+              { key: "hand_written", label: "Hand_written_notes", url: "https://drive.google.com/drive/folders/1VaP5QxZmtO02fTcvuFgBG-Pl8ibdw6Rg?usp=drive_link" },
+              { key: "icas", label: "ICAs", url: "https://drive.google.com/drive/folders/1HovEYwgr_vysGgVfZo1oZINjiPPbvrN_?usp=drive_link" },
               { key: "pastpapers", label: "Past Papers", url: "#" },
             ],
           },
@@ -743,8 +743,8 @@ const computerScience: SubjectData = {
             name: "Advanced Topics in Computer Networks",
             resources: [
               { key: "notes", label: "Notes", url: "https://drive.google.com/drive/folders/1pEZrCTxISG4BPYhrYMOgX6tw2sgJthxf?usp=drive_link" },
-              { key: "hand_written", label: "Hand_written_notes", url: "#" },
-              { key: "icas", label: "ICAs", url: "#" },
+              { key: "hand_written", label: "Hand_written_notes", url: "https://drive.google.com/drive/folders/1b7tFovc2KR0A6CBalloZmlbNik_YZUl1?usp=drive_link" },
+              { key: "icas", label: "ICAs", url: "https://drive.google.com/drive/folders/1x4i0k03oewEJnRXpoTj1BlSWjsvwVfJe?usp=drive_link" },
               { key: "pastpapers", label: "Past Papers", url: "#" },
             ],
           },
