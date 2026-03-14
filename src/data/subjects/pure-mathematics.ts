@@ -1,9 +1,11 @@
-/**
- * PURE MATHEMATICS — resource data
- * Replace "#" with the Google Drive sharing URL for each resource.
- */
-
 import type { SubjectData } from "../types";
+
+const defaultResources = [
+  { key: "notes", label: "Notes", url: "#" },
+  { key: "tutorials", label: "Tutorials", url: "#" },
+  { key: "icas", label: "ICAs", url: "#" },
+  { key: "pastpapers", label: "Past Papers", url: "#" },
+];
 
 const pureMathematics: SubjectData = {
   "1st-year": {
@@ -14,23 +16,61 @@ const pureMathematics: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "PM101",
-            name: "Calculus I",
+            code: "PMM101G3",
+            name: "Foundations of Mathematics",
             resources: [
-              { key: "notes", label: "Notes", url: "#" },
-              { key: "tutorials", label: "Tutorials", url: "#" },
+              {
+                key: "notes",
+                label: "Notes",
+                url: "https://drive.google.com/drive/folders/17zVofcFQX-EZ_-e9SivAJtma2W6kTi95?usp=drive_link",
+              },
+              {
+                key: "tutorials",
+                label: "Tutorials",
+                url: "https://drive.google.com/drive/folders/17XsSScztS2FTX-n9lrHfG1U3ErQQ36Ul?usp=drive_link",
+              },
+              {
+                key: "additional",
+                label: "Additional Resources",
+                url: "https://drive.google.com/drive/folders/151U6ouPf4PBbpzrWVHag-HsFUChCel62?usp=drive_link",
+              },
               { key: "icas", label: "ICAs", url: "#" },
-              { key: "pastpapers", label: "Past Papers", url: "#" },
+              {
+                key: "pastpapers",
+                label: "Past Papers",
+                url: "https://drive.google.com/drive/folders/1jUFU1UgU5zD2MJQ89guNj7yma4I6P0sY?usp=drive_link",
+              },
             ],
           },
           {
-            code: "PM102",
-            name: "Linear Algebra",
+            code: "PMM102G2",
+            name: "Limit Process",
             resources: [
-              { key: "notes", label: "Notes", url: "#" },
-              { key: "tutorials", label: "Tutorials", url: "#" },
-              { key: "icas", label: "ICAs", url: "#" },
-              { key: "pastpapers", label: "Past Papers", url: "#" },
+              {
+                key: "notes",
+                label: "Notes",
+                url: "https://drive.google.com/drive/folders/1wNrN4Iv4S15Mx9n504R-rWIVledKkvPM?usp=drive_link",
+              },
+              {
+                key: "tutorials",
+                label: "Tutorials",
+                url: "https://drive.google.com/drive/folders/1e1w157aE3OQThnn82C0yo9wis0fF3eDe?usp=drive_link",
+              },
+              {
+                key: "additional",
+                label: "Additional Resources",
+                url: "https://drive.google.com/drive/folders/1g-uOVs_rsYTmXkiLL5HP6VhpTtjuLI0H?usp=drive_link",
+              },
+              {
+                key: "icas",
+                label: "ICAs",
+                url: "https://drive.google.com/drive/folders/1-m3rMdEZmlLFL6mB_bXTtmMv7fLiWQlD?usp=drive_link",
+              },
+              {
+                key: "pastpapers",
+                label: "Past Papers",
+                url: "https://drive.google.com/drive/folders/1_N7Bjj4WxuQ1Nz1b91lLdwYWDAZDZ3x9?usp=drive_link",
+              },
             ],
           },
         ],
@@ -40,21 +80,23 @@ const pureMathematics: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "PM103",
-            name: "Calculus II",
+            code: "PMM103G3",
+            name: "Algebra and Number Theory",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "additional", label: "Additional Resources", url: "#" },
               { key: "icas", label: "ICAs", url: "#" },
               { key: "pastpapers", label: "Past Papers", url: "#" },
             ],
           },
           {
-            code: "PM104",
-            name: "Vector Calculus",
+            code: "PMM104G2",
+            name: "Calculus",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "additional", label: "Additional Resources", url: "#" },
               { key: "icas", label: "ICAs", url: "#" },
               { key: "pastpapers", label: "Past Papers", url: "#" },
             ],
@@ -71,21 +113,23 @@ const pureMathematics: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "PM201",
-            name: "Real Analysis",
+            code: "PMM201G3",
+            name: "Linear Algebra",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "additional", label: "Additional Resources", url: "#" },
               { key: "icas", label: "ICAs", url: "#" },
               { key: "pastpapers", label: "Past Papers", url: "#" },
             ],
           },
           {
-            code: "PM202",
-            name: "Group Theory",
+            code: "PMM202G2",
+            name: "Advanced Calculus",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "additional", label: "Additional Resources", url: "#" },
               { key: "icas", label: "ICAs", url: "#" },
               { key: "pastpapers", label: "Past Papers", url: "#" },
             ],
@@ -97,21 +141,23 @@ const pureMathematics: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "PM203",
-            name: "Abstract Algebra",
+            code: "PMM203G3",
+            name: "Analysis",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "additional", label: "Additional Resources", url: "#" },
               { key: "icas", label: "ICAs", url: "#" },
               { key: "pastpapers", label: "Past Papers", url: "#" },
             ],
           },
           {
-            code: "PM204",
-            name: "Number Theory",
+            code: "PMM204G2",
+            name: "Linear Algebra and Analytic Geometry",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "additional", label: "Additional Resources", url: "#" },
               { key: "icas", label: "ICAs", url: "#" },
               { key: "pastpapers", label: "Past Papers", url: "#" },
             ],
@@ -128,21 +174,23 @@ const pureMathematics: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "PM301",
-            name: "Topology",
+            code: "PMM301G3",
+            name: "Abstract Algebra",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "additional", label: "Additional Resources", url: "#" },
               { key: "icas", label: "ICAs", url: "#" },
               { key: "pastpapers", label: "Past Papers", url: "#" },
             ],
           },
           {
-            code: "PM302",
-            name: "Functional Analysis",
+            code: "PMM302G3",
+            name: "Complex Analysis",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "additional", label: "Additional Resources", url: "#" },
               { key: "icas", label: "ICAs", url: "#" },
               { key: "pastpapers", label: "Past Papers", url: "#" },
             ],
@@ -154,21 +202,23 @@ const pureMathematics: SubjectData = {
         driveFolder: "#",
         courses: [
           {
-            code: "PM303",
-            name: "Complex Analysis",
+            code: "PMM303G3",
+            name: "Discrete and Combinatorial Mathematics",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "additional", label: "Additional Resources", url: "#" },
               { key: "icas", label: "ICAs", url: "#" },
               { key: "pastpapers", label: "Past Papers", url: "#" },
             ],
           },
           {
-            code: "PM304",
-            name: "Differential Geometry",
+            code: "PMM304G3",
+            name: "Geometry",
             resources: [
               { key: "notes", label: "Notes", url: "#" },
               { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "additional", label: "Additional Resources", url: "#" },
               { key: "icas", label: "ICAs", url: "#" },
               { key: "pastpapers", label: "Past Papers", url: "#" },
             ],
