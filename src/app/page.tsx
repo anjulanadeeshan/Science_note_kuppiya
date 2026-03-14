@@ -235,11 +235,6 @@ export default function Home() {
 
       {/* ── Footer ───────────────────────────── */}
       <footer className="home-footer">
-        <p className="home-footer-disclaimer">
-          This platform is dedicated strictly to educational purposes. Our
-          mission is to provide students with seamless access to study materials
-          and resources.
-        </p>
         <div className="home-footer-brand">
           <p className="home-footer-dev">DEVELOPED BY</p>
           <p className="home-footer-team">TEAM ASGARD</p>
