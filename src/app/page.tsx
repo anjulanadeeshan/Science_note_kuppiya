@@ -89,7 +89,7 @@ const subjects: Subject[] = [
 
 export default function Home() {
   const router = useRouter();
-  const feedbackFormUrl = "https://forms.gle/your-feedback-form-link";
+  const feedbackFormUrl = "https://forms.gle/qRAmQuf3377x7wAG6";
 
   const handleSubjectClick = (subject: Subject) => {
     if (subject.disabled) return;
