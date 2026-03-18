@@ -56,7 +56,6 @@ const subjects: Subject[] = [
     icon: Zap,
     color: "linear-gradient(135deg, #d97706 0%, #f59e0b 100%)",
     glow: "rgba(217, 119, 6, 0.3)",
-    disabled: true,
   },
   {
     id: "physics",

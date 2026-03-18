@@ -56,12 +56,22 @@ const appliedMathematics: SubjectData = {
           {
             code: "AMM201G3",
             name: "Mathematical Methods",
-            resources: defaultResources,
+            resources: [
+              { key: "notes", label: "Notes", url: "https://drive.google.com/drive/folders/1x9lASLL580avRL2YLcZp9Zjly8P1l79K?usp=drive_link" },
+              { key: "tutorials", label: "Tutorials", url: "https://drive.google.com/drive/folders/1NjyZlqZ52Iris_jk9OdSGGRBHk1bXuzH?usp=drive_link" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "https://drive.google.com/drive/folders/1XvLq8Hmul3aAEGHDcerc7w7PFKY3HhJ_?usp=drive_link" },
+            ],
           },
           {
             code: "AMM202G2",
             name: "Fluid Dynamics",
-            resources: defaultResources,
+            resources: [
+              { key: "notes", label: "Notes", url: "https://drive.google.com/drive/folders/1nD57YV1Iwx05JRy5N6WUIrxgrh5oNPKq?usp=drive_link" },
+              { key: "tutorials", label: "Tutorials", url: "#" },
+              { key: "icas", label: "ICAs", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "#" },
+            ],
           },
         ],
       },
