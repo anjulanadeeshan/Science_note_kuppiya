@@ -91,6 +91,7 @@ const statistics: SubjectData = {
               { key: "notes", label: "Notes", url: "https://drive.google.com/drive/folders/1C7oT7ggKIYaPSXFmTOYUI5wU8izxfkY2?usp=drive_link" },
               { key: "tutorials", label: "Tutorials", url: "https://drive.google.com/drive/folders/1lUkvFms2Rx0r3iJOJGy4L4xneuwNnt7g?usp=drive_link" },
               { key: "additional", label: "Additional", url: "https://drive.google.com/drive/folders/1DyCcX-2vEfttOCamSxKprAuktbUcgYwQ?usp=drive_link" },
+              { key: "ICAs", label: "ICAs", url: "https://drive.google.com/drive/folders/1-XxEmFM7jhoa9CMDBqZE5RcCgJ3hSGao?usp=drive_link" },
               { key: "pastpapers", label: "Past Papers", url: "https://drive.google.com/drive/folders/1GXOOAHyc0rjPDY8jfJHQdwxZxoT67WDa?usp=drive_link" },
             ],
           },
