@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { resourceData } from "@/data";
 
 /* ── Subject meta (name / colour / icon) ─────────────────── */
 export const subjectMeta: Record<string, {
@@ -42,6 +43,8 @@ const years: YearDef[] = [
     { id: "4th-year", label: "4th Year", icon: GraduationCap,  semesters: [{ id: "sem1", label: "1st Semester" }, { id: "sem2", label: "2nd Semester" }], disabled: true },
 ];
 
+const hasAvailableResource = (url?: string) => !!url && url !== "#";
+
 /* ── Component ────────────────────────────────────────────── */
 export default function SubjectClient({ subjectId }: { subjectId: string }) {
     const router = useRouter();
@@ -49,6 +52,7 @@ export default function SubjectClient({ subjectId }: { subjectId: string }) {
     const [modalOpen,  setModalOpen ] = useState(false);
 
     const meta = subjectMeta[subjectId];
+    const subjectYears = resourceData[subjectId];
 
     if (!meta) {
         return (
@@ -60,6 +64,37 @@ export default function SubjectClient({ subjectId }: { subjectId: string }) {
     }
 
     const SubjectIcon = meta.icon;
+
+    const availabilityByYear = years.map((yearDef) => {
+        const yearData = subjectYears?.[yearDef.id];
+
+        const semesters = yearDef.semesters.map((semDef) => {
+            const semesterData = yearData?.semesters?.[semDef.id];
+            const courses = semesterData?.courses ?? [];
+            const availableCourses = courses.filter((course) =>
+                course.resources.some((resource) => hasAvailableResource(resource.url))
+            );
+
+            return {
+                id: semDef.id,
+                label: semDef.label,
+                total: courses.length,
+                available: availableCourses.length,
+                codes: availableCourses.map((course) => course.code),
+            };
+        });
+
+        const totalSubjects = semesters.reduce((sum, sem) => sum + sem.total, 0);
+        const availableSubjects = semesters.reduce((sum, sem) => sum + sem.available, 0);
+
+        return {
+            id: yearDef.id,
+            label: yearDef.label,
+            totalSubjects,
+            availableSubjects,
+            semesters,
+        };
+    });
 
     const openModal = (year: YearDef) => {
         if (year.disabled) return;
@@ -139,6 +174,52 @@ export default function SubjectClient({ subjectId }: { subjectId: string }) {
                             </button>
                         );
                     })}
+                </div>
+            </section>
+
+            {/* ── Availability overview ── */}
+            <section className="subj-availability-section">
+                <div className="home-section-header">
+                    <h2 className="home-section-title">Resource Availability Overview</h2>
+                    <p className="home-section-desc">
+                        Quick preview of which subject resources are currently available in each semester.
+                    </p>
+                </div>
+
+                <div className="subj-availability-grid">
+                    {availabilityByYear.map((yearInfo) => (
+                        <article key={yearInfo.id} className="subj-availability-card">
+                            <div className="subj-availability-head">
+                                <h3>{yearInfo.label}</h3>
+                                <span className="subj-availability-count">
+                                    {yearInfo.availableSubjects}/{yearInfo.totalSubjects || 0} Available
+                                </span>
+                            </div>
+
+                            <div className="subj-availability-semesters">
+                                {yearInfo.semesters.map((semInfo) => (
+                                    <div key={semInfo.id} className="subj-availability-sem-item">
+                                        <div className="subj-availability-sem-top">
+                                            <span>{semInfo.label}</span>
+                                            <span className="subj-availability-sem-count">
+                                                {semInfo.available}/{semInfo.total || 0}
+                                            </span>
+                                        </div>
+
+                                        {semInfo.codes.length > 0 ? (
+                                            <div className="subj-availability-codes">
+                                                {semInfo.codes.map((code) => (
+                                                    <span key={code} className="subj-availability-code-pill">{code}</span>
+                                                ))}
+                                            </div>
+                                        ) : (
+                                            <p className="subj-availability-empty">No resources published yet</p>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                        </article>
+                    ))}
                 </div>
             </section>
 

@@ -1089,6 +1089,96 @@ button {
   min-height: 160px;
 }
 
+.subj-availability-section {
+  margin-bottom: 2.75rem;
+}
+
+.subj-availability-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.subj-availability-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1rem;
+}
+
+.subj-availability-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.subj-availability-head h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.subj-availability-count {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: var(--primary-light);
+}
+
+.subj-availability-semesters {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.subj-availability-sem-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 0.7rem;
+}
+
+.subj-availability-sem-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.subj-availability-sem-count {
+  color: var(--text-muted);
+}
+
+.subj-availability-codes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.55rem;
+}
+
+.subj-availability-code-pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: var(--primary-light);
+  background: rgba(30, 144, 255, 0.12);
+  border: 1px solid rgba(30, 144, 255, 0.24);
+  border-radius: 999px;
+  padding: 0.18rem 0.5rem;
+}
+
+.subj-availability-empty {
+  margin-top: 0.5rem;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
 /* ══════════════════════════════════════════════════════════
    SUBJECT / SEMESTER RESOURCE PAGE
 ══════════════════════════════════════════════════════════ */
@@ -1417,6 +1507,10 @@ button {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .subj-availability-grid {
+    grid-template-columns: 1fr;
+  }
+
   .home-footer {
     flex-direction: column;
     align-items: flex-start;
@@ -1444,6 +1538,11 @@ button {
   .home-subject-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
+  }
+
+  .subj-year-grid,
+  .subj-availability-grid {
+    grid-template-columns: 1fr;
   }
 
   .home-subject-card {
