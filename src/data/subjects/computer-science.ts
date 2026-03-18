@@ -756,7 +756,7 @@ const computerScience: SubjectData = {
             resources: [
               { key: "notes", label: "Notes", url: "https://drive.google.com/drive/folders/1RFVG4gM91KBxB1j0GeyOoIyoYvijF7PK?usp=drive_link" },
               { key: "practicals", label: "MatLab", url: "https://drive.google.com/drive/folders/1w73CmoKEBgKBnhjpYbj5NlCqr8Z2qgxH?usp=drive_link" },
-              { key: "icas", label: "ICAs", url: "#" },
+              { key: "icas", label: "ICAs", url: "https://drive.google.com/drive/folders/1spYUVeAnfztj_wXoPuu-XLScAtByGGZ5?usp=drive_link" },
               { key: "pastpapers", label: "Past Papers", url: "https://drive.google.com/drive/folders/1S7PBEj-k14JZVjj7hUG1VaQqBVid3oHS?usp=drive_link" },
             ],
           },
