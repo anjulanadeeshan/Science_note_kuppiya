@@ -714,7 +714,7 @@ const computerScience: SubjectData = {
               { key: "full_resources", label: "Full Resourses", url: "https://drive.google.com/drive/folders/1kELBATBeOYzAs42OfutFSxYgZS3HKOLE?usp=drive_link" },
               { key: "graphics", label: "Computer Graphics", url: "https://drive.google.com/drive/folders/1tb2PQuJioFD7K562T3Hl-2rmoI3fzXfm?usp=drive_link" },
               { key: "laravel", label: "Laravel", url: "https://drive.google.com/drive/folders/1y7Uel_JQKKeJEqB7TELdwTIbwAcONMsX?usp=drive_link" },
-              { key: "pastpapers", label: "Past Papers", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "https://drive.google.com/drive/folders/1-UDDqT2OEgorVMYulpXzeSor9HMFzkuo?usp=drive_link" },
             ],
           },
           {
@@ -736,7 +736,7 @@ const computerScience: SubjectData = {
               { key: "notes", label: "Notes", url: "https://drive.google.com/drive/folders/1C_Tzy5zwInM9jbSdKI9qzThL80iYcnbw?usp=drive_link" },
               { key: "hand_written", label: "Hand written notes", url: "#" },
               { key: "icas", label: "ICAs", url: "https://drive.google.com/drive/folders/1YZLVXOg6RaMnS8HyDI_Ozl46VRG8UIm9?usp=drive_link" },
-              { key: "pastpapers", label: "Past Papers", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "https://drive.google.com/drive/folders/1869m_xZS1mnsFPu5t2Z4q8fEKlnT5V9O?usp=drive_link" },
             ],
           },
           {
@@ -747,7 +747,7 @@ const computerScience: SubjectData = {
               { key: "hand_written", label: "Hand written notes", url: "https://drive.google.com/drive/folders/1b7tFovc2KR0A6CBalloZmlbNik_YZUl1?usp=drive_link" },
               { key: "icas", label: "ICAs", url: "https://drive.google.com/drive/folders/1x4i0k03oewEJnRXpoTj1BlSWjsvwVfJe?usp=drive_link" },
               { key: "additional", label: "Additional resourses", url: "https://drive.google.com/drive/folders/1b7tFovc2KR0A6CBalloZmlbNik_YZUl1?usp=drive_link" },
-              { key: "pastpapers", label: "Past Papers", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "https://drive.google.com/drive/folders/164Jxt_auITz7l6Cd2eqSPp3dMPNdlPvR?usp=drive_link" },
             ],
           },
           {
