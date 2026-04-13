@@ -725,7 +725,7 @@ const computerScience: SubjectData = {
               { key: "hand_written", label: "Hand written notes", url: "https://drive.google.com/drive/folders/1VaP5QxZmtO02fTcvuFgBG-Pl8ibdw6Rg?usp=drive_link" },
               { key: "icas", label: "ICAs", url: "https://drive.google.com/drive/folders/1HovEYwgr_vysGgVfZo1oZINjiPPbvrN_?usp=drive_link" },
                { key: "additional", label: "Additional resourses", url: "https://drive.google.com/drive/folders/1VaP5QxZmtO02fTcvuFgBG-Pl8ibdw6Rg?usp=drive_link" },
-              { key: "pastpapers", label: "Past Papers", url: "#" },
+              { key: "pastpapers", label: "Past Papers", url: "https://drive.google.com/drive/folders/1-SqB-fxmTW5TyL6K_6c7mG2F-_sLu9dK?usp=drive_link" },
             ],
           },
           {
